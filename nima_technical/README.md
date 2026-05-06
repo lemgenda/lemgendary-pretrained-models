@@ -5,7 +5,7 @@ The **LemGendary NIMA Technical Scorer** is a professional-grade AI model optimi
 - **Architecture**: NIMA_Model (EfficientNetV2-S (Spatial Integrity))
 - **Input Resolution**: 384x384
 - **Use Case**: Technical quality scorer trained on custom standardized LemGendizedQualityDataset, optimized for detecting micro-defects, noise, and artifacts.
-- **Training Data**: LemGendizedQualityDataset
+- **Training Data**: LemGendizedNimaTechnical
 - **Evaluation**: Validated against SOTA quality baselines.
 
 > [!IMPORTANT]
@@ -35,6 +35,9 @@ mean_score = torch.sum(probs * scores).item()
 print(f"Quality Score: {mean_score:.2f}")
 ```
 
+> [!TIP]
+> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[nima_technical_usage.ipynb](nima_technical_usage.ipynb)** notebook in this directory.
+
 - **Input Requirements**: RGB Image Tensors normalized to ImageNet stats.
 - **Output Characteristics**: Quality predictive arrays.
 - **Failures**: Large aspect ratio distortions during the standard resize phases.
@@ -49,7 +52,7 @@ This model is a core module within the **LemGendary AI Training Suite**.
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.11+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 14 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 16 total epochs securely.
 
 # Model Characteristics
 
@@ -76,7 +79,7 @@ Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Ancho
 ## Training data
 
 Collected and curated from the following high-fidelity arrays:
-- **LemGendizedQualityDataset**: ~440k binary image samples.
+- **LemGendizedNimaTechnical**: ~N/A binary image samples.
 
 ## Demographic groups
 
@@ -91,7 +94,7 @@ Managed via an **80/20 train/validate split** with zero sample-leakage across th
 ## Summary
 
 The model has been structurally converged to achieve the following SOTA baselines:
-- **Baseline Achievement**: **PLCC**: 0.984826385974884 | **SRCC**: 0.9036618127738734
+- **Baseline Achievement**: **PLCC**: 0.9838 | **SRCC**: 0.8887
 
 ## Fairness 
 

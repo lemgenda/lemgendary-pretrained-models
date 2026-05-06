@@ -1,13 +1,16 @@
 # Model Summary
 
-The **LemGendary NAFNet Denoising** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite. 
+The **LemGendary NIMA Aesthetic Scorer** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite. 
 
-- **Architecture**: NAFNet (Standard Backbone)
-- **Input Resolution**: 640x640
-- **Use Case**: NAFNet image denoising
-- **Training Data**: LemGendizedNafNetDenoising
-- **Evaluation**: Validated against SOTA restoration baselines.
+- **Architecture**: NIMA_Model (MobileNetV2 (Global Composition))
+- **Input Resolution**: 512x512
+- **Use Case**: Aesthetic quality scorer trained on custom standardized LemGendizedQualityDataset, optimized for artistic composition and color harmony.
+- **Training Data**: LemGendizedNimaAesthetic
+- **Evaluation**: Validated against SOTA quality baselines.
 
+> [!IMPORTANT]
+> **Quality Vector**: This model is specialized for **Aesthetics**. 
+> - **Primary Targets**: Composition, Color, Lighting, Artistic Intent.
 
 
 ## Usage
@@ -15,25 +18,28 @@ The **LemGendary NAFNet Denoising** is a professional-grade AI model optimized f
 ```python
 import torch
 from PIL import Image
-from models.factory import create_model
+from models.nima import NIMA_Model
 
 # 1. Initialize
-model = create_model("nafnet_denoising")
-model.load_state_dict(torch.load("nafnet_denoising_latest.pth"))
+model = NIMA_Model()
+model.load_state_dict(torch.load("nima_aesthetic_latest.pth"))
 model.eval()
 
-# 2. Restoration Pass
-img = Image.open("degraded.jpg")
-restored = model(img)
-restored_img = Image.fromarray(restored.byte().cpu().numpy())
-restored_img.save("restored.png")
+# 2. Forward Pass
+img = Image.open("photo.jpg").resize((512, 512))
+probs = model(img)
+
+# 3. Scale Calculation
+scores = torch.arange(1, 11).float()
+mean_score = torch.sum(probs * scores).item()
+print(f"Quality Score: {mean_score:.2f}")
 ```
 
 > [!TIP]
-> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[nafnet_denoising_usage.ipynb](nafnet_denoising_usage.ipynb)** notebook in this directory.
+> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[nima_aesthetic_usage.ipynb](nima_aesthetic_usage.ipynb)** notebook in this directory.
 
 - **Input Requirements**: RGB Image Tensors normalized to ImageNet stats.
-- **Output Characteristics**: Restoration predictive arrays.
+- **Output Characteristics**: Quality predictive arrays.
 - **Failures**: Large aspect ratio distortions during the standard resize phases.
 
 ## System
@@ -46,7 +52,7 @@ This model is a core module within the **LemGendary AI Training Suite**.
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.11+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 202 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 54 total epochs securely.
 
 # Model Characteristics
 
@@ -73,7 +79,7 @@ Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Ancho
 ## Training data
 
 Collected and curated from the following high-fidelity arrays:
-- **LemGendizedNafNetDenoising**: ~N/A binary image samples.
+- **LemGendizedNimaAesthetic**: ~N/A binary image samples.
 
 ## Demographic groups
 
@@ -88,7 +94,7 @@ Managed via an **80/20 train/validate split** with zero sample-leakage across th
 ## Summary
 
 The model has been structurally converged to achieve the following SOTA baselines:
-- **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 15.0-
+- **Baseline Achievement**: **PLCC**: 0.6307 | **SRCC**: 0.7235
 
 ## Fairness 
 
