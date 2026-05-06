@@ -19,3 +19,7 @@ LemGendaryModels/
 # Ensure we DO NOT block .pth and .onnx here as they are the Hub purpose
 !*.pth
 !*.onnx
+
+#GitHub PAT
+.GITHUB_PAT
+.SUITE_PAT
