@@ -1,0 +1,21 @@
+# [LM-HUB] [VERSION 2.0.0] [PRETRAINED]
+# High-fidelity weights are tracked via Git LFS
+
+# 1. Block Local OS Garbage
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 2. Block Volatile Training Residue
+__pycache__/
+.ipynb_checkpoints/
+*.tmp
+*.log
+
+# 3. Block Shadow Directories
+LemGendaryModels/
+
+# 4. Allow High-Fidelity Weights (PRODUCTION)
+# Ensure we DO NOT block .pth and .onnx here as they are the Hub purpose
+!*.pth
+!*.onnx
