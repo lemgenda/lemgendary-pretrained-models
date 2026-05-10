@@ -94,7 +94,7 @@ Managed via an **80/20 train/validate split** with zero sample-leakage across th
 ## Summary
 
 The model has been structurally converged to achieve the following SOTA baselines:
-- **Baseline Achievement**: **PLCC**: 0.6307 | **SRCC**: 0.7235
+- **Baseline Achievement**: **PLCC**: 0.9596 | **SRCC**: 0.9068
 
 ## Fairness 
 
