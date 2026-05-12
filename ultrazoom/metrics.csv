@@ -1,1 +1,1 @@
-Epoch,Train_Loss,Val_Loss,LR,PLCC,SRCC,PSNR,SSIM,LPIPS,FID,mAP50,mAP50-95,Accuracy,Res,Data,Temp,Clamp,Cooldown,Batch,Accumulation,Stress
+Epoch,Train_Loss,Val_Loss,LR,PLCC,SRCC,PSNR,SSIM,LPIPS,FID,mAP50,mAP50-95,Accuracy,Rank_Margin,Quality_Score,Res,Data,Temp,Clamp,Cooldown,Batch,Accumulation,Stress
