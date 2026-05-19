@@ -1,6 +1,6 @@
 # Model Summary
 
-The **LemGendary NIMA Aesthetic Scorer** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite. 
+The **LemGendary NIMA Aesthetic Scorer** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: NIMA_Model (MobileNetV2 (Global Composition))
 - **Input Resolution**: 512x512
@@ -9,9 +9,9 @@ The **LemGendary NIMA Aesthetic Scorer** is a professional-grade AI model optimi
 - **Evaluation**: Validated against SOTA quality baselines.
 
 > [!IMPORTANT]
-> **Quality Vector**: This model is specialized for **Aesthetics**. 
+> **Quality Vector**: This model is specialized for **Aesthetics**.
+>
 > - **Primary Targets**: Composition, Color, Lighting, Artistic Intent.
-
 
 ## Usage
 
@@ -44,7 +44,8 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## System
 
-This model is a core module within the **LemGendary AI Training Suite**. 
+This model is a core module within the **LemGendary AI Training Suite**.
+
 - **Upstream**: Compressed/Raw RGB Buffers.
 - **Downstream**: Dynamic restoration feedback loops and automated sorting scripts.
 
@@ -54,7 +55,7 @@ This model is a core module within the **LemGendary AI Training Suite**.
 - **Software**: PyTorch 2.11+, CUDA 12.1.
 - **Training Lifecycle**: Successfully processed over 54 total epochs securely.
 
-# Model Characteristics
+## Model Characteristics
 
 ## Model initialization
 
@@ -74,12 +75,13 @@ The matrix is optimized for browser-based execution via **ONNX Runtime Web**, by
 
 Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring to prevent probability collapse. The batch-level PLCC penalty is explicitly disabled to preserve global True Rank Correlation (SRCC).
 
-# Data Overview
+## Data Overview
 
 ## Training data
 
 Collected and curated from the following high-fidelity arrays:
-- **LemGendizedNimaAesthetic**: ~N/A binary image samples.
+
+- **LemGendizedNimaAesthetic**: ~294,422 aesthetic quality samples.
 
 ## Demographic groups
 
@@ -89,14 +91,15 @@ N/A. This matrix assesses photographic composition and signal restoration integr
 
 Managed via an **80/20 train/validate split** with zero sample-leakage across the validation matrix.
 
-# Evaluation Results
+## Evaluation Results
 
 ## Summary
 
 The model has been structurally converged to achieve the following SOTA baselines:
+
 - **Baseline Achievement**: **PLCC**: 0.9596 | **SRCC**: 0.9068
 
-## Fairness 
+## Fairness
 
 Stability is optimized across low-dynamic-range and high-dynamic-range scenarios equally.
 
