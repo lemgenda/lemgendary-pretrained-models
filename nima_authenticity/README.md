@@ -1,10 +1,10 @@
 # LemGendary Authenticity Scorer (AI vs Human)
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-82-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-96-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
 
 ## Overview
 
-The **LemGendary Authenticity Scorer (AI vs Human)** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite.
+The **LemGendary Authenticity Scorer (AI vs Human)** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite. 
 
 - **Architecture**: NIMA_Model (EfficientNetV2-S (Distribution Scorer))
 - **Input Resolution**: 256x256
@@ -13,21 +13,23 @@ The **LemGendary Authenticity Scorer (AI vs Human)** is a professional-grade AI 
 
 ## Manifold Topology
 
+
 ```mermaid
 graph TD
     Input[RGB Input 256x256] --> Backbone[NIMA_Model]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Quality Head]
     Head --> Output[Predictive Array]
-
+    
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
 
+
 > [!IMPORTANT]
-> **Quality Vector**: This model is specialized for **Authenticity (AI vs. Real)**.
->
-> - **Primary Targets**: GAN, Diffusion, and NeRF synthetic artifacts vs. Real photography.
+> **Quality Vector**: This model is specialized for **Technical Integrity**. 
+> - **Primary Targets**: Noise, Blur, Compression, Sharpness.
+
 
 ## Usage
 
@@ -71,7 +73,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 82 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 96 total epochs securely.
 
 ## Model Stats
 
@@ -81,11 +83,11 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Data Manifest
 
-- **LemGendizedNimaAuthenticity**: ~127,093 authenticity samples.
+- **LemGendizedNimaAuthenticity**: ~N/A binary image samples.
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **Accuracy**: 0.9336 | **PLCC**: 0.5349 | **SRCC**: 0.4458 (Best Epoch)
+- **Baseline Achievement**: **PLCC**: 0.7590444087982178 | **SRCC**: 0.615781175364994
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
