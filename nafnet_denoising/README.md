@@ -1,13 +1,13 @@
 # LemGendary NAFNet Denoising
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-14-orange) ![Resolution](https://img.shields.io/badge/Res-384x384-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-22-orange) ![Resolution](https://img.shields.io/badge/Res-640x640-blueviolet)
 
 ## Overview
 
 The **LemGendary NAFNet Denoising** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite. 
 
 - **Architecture**: NAFNet (Standard Backbone)
-- **Input Resolution**: 384x384
+- **Input Resolution**: 640x640
 - **Use Case**: NAFNet image denoising
 - **Training Data**: LemGendizedNafNetDenoising
 
@@ -16,7 +16,7 @@ The **LemGendary NAFNet Denoising** is a professional-grade AI model optimized f
 
 ```mermaid
 graph TD
-    Input[RGB Input 384x384] --> Backbone[NAFNet]
+    Input[RGB Input 640x640] --> Backbone[NAFNet]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Restoration Head]
     Head --> Output[Predictive Array]
@@ -69,7 +69,7 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 14 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 22 total epochs securely.
 
 ## Model Stats
 
@@ -83,7 +83,7 @@ restored_img.save("restored.png")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 49.0038884090346 | **SSIM**: 0.998977541923523 | **LPIPS**: 0.0035825363851876724
+- **Baseline Achievement**: **PSNR**: 51.451095837071094 | **SSIM**: 0.9996803402900696 | **LPIPS**: 0.002198543873857017
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
