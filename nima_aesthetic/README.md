@@ -1,13 +1,13 @@
 # LemGendary NIMA Aesthetic Scorer
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-9-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-15-orange) ![Resolution](https://img.shields.io/badge/Res-640x640-blueviolet)
 
 ## Overview
 
 The **LemGendary NIMA Aesthetic Scorer** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite. 
 
 - **Architecture**: NIMA_Model (MobileNetV2 (Global Composition))
-- **Input Resolution**: 512x512
+- **Input Resolution**: 640x640
 - **Use Case**: Aesthetic quality scorer trained on custom standardized LemGendizedQualityDataset, optimized for artistic composition and color harmony.
 - **Training Data**: LemGendizedNimaAesthetic
 
@@ -16,7 +16,7 @@ The **LemGendary NIMA Aesthetic Scorer** is a professional-grade AI model optimi
 
 ```mermaid
 graph TD
-    Input[RGB Input 512x512] --> Backbone[NIMA_Model]
+    Input[RGB Input 640x640] --> Backbone[NIMA_Model]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Quality Head]
     Head --> Output[Predictive Array]
@@ -52,7 +52,7 @@ model.load_state_dict(state)
 model.eval()
 
 # 4. Forward Pass
-img = Image.open("photo.jpg").convert('RGB').resize((512, 512))
+img = Image.open("photo.jpg").convert('RGB').resize((640, 640))
 input_tensor = torch.from_numpy(np.array(img)).permute(2,0,1).float().unsqueeze(0).to(device) / 255.0
 with torch.no_grad():
     probs = model(input_tensor)
@@ -73,7 +73,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 9 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 15 total epochs securely.
 
 ## Model Stats
 
@@ -87,7 +87,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PLCC**: 0.47792571783065796 | **SRCC**: 0.4610542737742203
+- **Baseline Achievement**: **PLCC**: 0.5060908794403076 | **SRCC**: 0.4684982075726767
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
