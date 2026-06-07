@@ -1,13 +1,13 @@
 # LemGendary NAFNet Debluring
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-61-orange) ![Resolution](https://img.shields.io/badge/Res-768x768-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-25-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
 The **LemGendary NAFNet Debluring** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite. 
 
 - **Architecture**: NAFNet (Standard Backbone)
-- **Input Resolution**: 768x768
+- **Input Resolution**: 512x512
 - **Use Case**: NAFNet image debluring
 - **Training Data**: LemGendizedNafNetDebluring
 
@@ -16,7 +16,7 @@ The **LemGendary NAFNet Debluring** is a professional-grade AI model optimized f
 
 ```mermaid
 graph TD
-    Input[RGB Input 768x768] --> Backbone[NAFNet]
+    Input[RGB Input 512x512] --> Backbone[NAFNet]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Restoration Head]
     Head --> Output[Predictive Array]
@@ -69,7 +69,7 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 61 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 25 total epochs securely.
 
 ## Model Stats
 
@@ -83,7 +83,7 @@ restored_img.save("restored.png")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 33.44463465862359 | **SSIM**: 0.9739100933074951 | **LPIPS**: 0.043526504626559735
+- **Baseline Achievement**: **PSNR**: 32.98499527618657 | **SSIM**: 0.9715515375137329 | **LPIPS**: 0.039339821334860095
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
