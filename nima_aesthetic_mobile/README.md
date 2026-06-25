@@ -1,6 +1,6 @@
 # LemGendary NIMA Aesthetic Scorer (Mobile)
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-60-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-63-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
@@ -73,7 +73,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 60 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 63 total epochs securely.
 
 ## Model Stats
 
@@ -87,7 +87,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PLCC**: 0.45146748423576355 | **SRCC**: 0.48945373820949684
+- **Baseline Achievement**: **PLCC**: 0.47201135754585266 | **SRCC**: 0.48524864836735954
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
