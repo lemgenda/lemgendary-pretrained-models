@@ -1,13 +1,13 @@
 # LemGendary NIMA Technical Scorer
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-1-orange) ![Resolution](https://img.shields.io/badge/Res-384x384-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-55-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
 The **LemGendary NIMA Technical Scorer** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite. 
 
 - **Architecture**: NIMA_Model (EfficientNetV2-S (Spatial Integrity))
-- **Input Resolution**: 384x384
+- **Input Resolution**: 512x512
 - **Use Case**: Technical quality scorer trained on custom standardized LemGendizedQualityDataset, optimized for detecting micro-defects, noise, and artifacts.
 - **Training Data**: LemGendizedNimaTechnical
 
@@ -16,7 +16,7 @@ The **LemGendary NIMA Technical Scorer** is a professional-grade AI model optimi
 
 ```mermaid
 graph TD
-    Input[RGB Input 384x384] --> Backbone[NIMA_Model]
+    Input[RGB Input 512x512] --> Backbone[NIMA_Model]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Quality Head]
     Head --> Output[Predictive Array]
@@ -52,7 +52,7 @@ model.load_state_dict(state)
 model.eval()
 
 # 4. Forward Pass
-img = Image.open("photo.jpg").convert('RGB').resize((384, 384))
+img = Image.open("photo.jpg").convert('RGB').resize((512, 512))
 input_tensor = torch.from_numpy(np.array(img)).permute(2,0,1).float().unsqueeze(0).to(device) / 255.0
 with torch.no_grad():
     probs = model(input_tensor)
@@ -73,7 +73,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 1 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 55 total epochs securely.
 
 ## Model Stats
 
@@ -87,7 +87,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PLCC**: 0.03130093589425087 | **SRCC**: 0.1566206729623415
+- **Baseline Achievement**: **PLCC**: 0.6376967430114746 | **SRCC**: 0.7173735854839236
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
