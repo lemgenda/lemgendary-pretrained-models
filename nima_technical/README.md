@@ -1,6 +1,6 @@
 # LemGendary NIMA Technical Scorer
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-75-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-76-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
@@ -73,7 +73,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 75 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 76 total epochs securely.
 
 ## Model Stats
 
@@ -87,7 +87,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PLCC**: 0.5837679505348206 | **SRCC**: 0.6561436680351794
+- **Baseline Achievement**: **PLCC**: 0.6373123526573181 | **SRCC**: 0.6812347041283107
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
