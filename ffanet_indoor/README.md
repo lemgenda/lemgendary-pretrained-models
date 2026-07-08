@@ -45,6 +45,8 @@ state = ckpt.get('model_state', ckpt) if isinstance(ckpt, dict) else ckpt
 # 3. Initialization
 from models.factory import create_model
 model = create_model("ffanet_indoor").to(device)
+if device.type == \'cuda\' and torch.cuda.device_count() > 1:
+    model = torch.nn.DataParallel(model)
 model.load_state_dict(state)
 model.eval()
 

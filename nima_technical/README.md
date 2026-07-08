@@ -48,6 +48,8 @@ state = ckpt.get('model_state', ckpt) if isinstance(ckpt, dict) else ckpt
 # 3. Initialization
 from models.nima import NIMA_Model
 model = NIMA_Model().to(device)
+if device.type == \'cuda\' and torch.cuda.device_count() > 1:
+    model = torch.nn.DataParallel(model)
 model.load_state_dict(state)
 model.eval()
 
