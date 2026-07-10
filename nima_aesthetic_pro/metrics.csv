@@ -1,1 +1,3 @@
-Epoch,Train_Loss,Val_Loss,LR,PLCC,SRCC,PSNR,SSIM,LPIPS,FID,mAP50,mAP50-95,Accuracy,Rank_Margin,MAE,mIoU,mAP_Medium,mAP_Hard,Accuracy_VQA,Quality_Score,Res,Data,Temp,Clamp,Cooldown,Batch,Accumulation,Stress
+version https://git-lfs.github.com/spec/v1
+oid sha256:098d189eaf5795fa7dac2e1d9a46674b5c6d5c16ef05a2ee35338d530b708f09
+size 391
