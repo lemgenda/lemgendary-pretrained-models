@@ -4,7 +4,7 @@
 
 ## Overview
 
-The **LemGendary Authenticity Scorer (AI vs Human)** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite. 
+The **LemGendary Authenticity Scorer (AI vs Human)** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: NIMA_Model (EfficientNetV2-S (Distribution Scorer))
 - **Input Resolution**: 512x512
@@ -12,7 +12,6 @@ The **LemGendary Authenticity Scorer (AI vs Human)** is a professional-grade AI 
 - **Training Data**: LemGendizedNimaAuthenticity
 
 ## Manifold Topology
-
 
 ```mermaid
 graph TD
@@ -25,11 +24,9 @@ graph TD
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
 
-
 > [!IMPORTANT]
 > **Quality Vector**: This model is specialized for **Technical Integrity**. 
 > - **Primary Targets**: Noise, Blur, Compression, Sharpness.
-
 
 ## Usage
 
@@ -81,7 +78,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring.
+- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 1.0 Temperature Anchoring.
 
 ## Data Manifest
 
@@ -89,7 +86,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PLCC**: 0.9147245287895203 | **SRCC**: 0.8484570415032021
+- **Baseline Achievement**: **PLCC**: 0.9147 | **SRCC**: 0.8485
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---

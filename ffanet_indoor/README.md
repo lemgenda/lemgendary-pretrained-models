@@ -4,7 +4,7 @@
 
 ## Overview
 
-The **LemGendary FFANet Dehazing (Indoor)** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite. 
+The **LemGendary FFANet Dehazing (Indoor)** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: FFANet (Standard Backbone)
 - **Input Resolution**: 256x256
@@ -12,7 +12,6 @@ The **LemGendary FFANet Dehazing (Indoor)** is a professional-grade AI model opt
 - **Training Data**: LemGendizedFfaNetIndoor
 
 ## Manifold Topology
-
 
 ```mermaid
 graph TD
@@ -24,9 +23,6 @@ graph TD
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
-
-
-
 
 ## Usage
 
@@ -45,7 +41,7 @@ state = ckpt.get('model_state', ckpt) if isinstance(ckpt, dict) else ckpt
 # 3. Initialization
 from models.factory import create_model
 model = create_model("ffanet_indoor").to(device)
-if device.type == \'cuda\' and torch.cuda.device_count() > 1:
+if device.type == 'cuda' and torch.cuda.device_count() > 1:
     model = torch.nn.DataParallel(model)
 model.load_state_dict(state)
 model.eval()
@@ -77,7 +73,7 @@ restored_img.save("restored.png")
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring.
+- **Stability**: Trained using **L1 Loss** to enforce strict manifold alignment.
 
 ## Data Manifest
 
@@ -85,7 +81,7 @@ restored_img.save("restored.png")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 45.485616091953396 | **SSIM**: 0.9975227117538452 | **LPIPS**: 0.015749993640682098
+- **Baseline Achievement**: **PSNR**: 45.49 | **SSIM**: 0.9975 | **LPIPS**: 0.0157 | **FID**: 0.2211
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---

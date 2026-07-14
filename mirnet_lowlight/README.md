@@ -4,7 +4,7 @@
 
 ## Overview
 
-The **LemGendary MIRNet v2 Low-Light Enhancement** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite. 
+The **LemGendary MIRNet v2 Low-Light Enhancement** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: MIRNet (Standard Backbone)
 - **Input Resolution**: 256x256
@@ -12,7 +12,6 @@ The **LemGendary MIRNet v2 Low-Light Enhancement** is a professional-grade AI mo
 - **Training Data**: LemGendizedMirNetLowLight
 
 ## Manifold Topology
-
 
 ```mermaid
 graph TD
@@ -24,9 +23,6 @@ graph TD
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
-
-
-
 
 ## Usage
 
@@ -77,7 +73,7 @@ restored_img.save("restored.png")
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring.
+- **Stability**: Trained using **L1 Loss** to enforce strict manifold alignment.
 
 ## Data Manifest
 
@@ -85,7 +81,7 @@ restored_img.save("restored.png")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 33.894731559753886 | **SSIM**: 0.9701555371284485 | **LPIPS**: 0.07587731393814533
+- **Baseline Achievement**: **PSNR**: 33.89 | **SSIM**: 0.9702 | **LPIPS**: 0.0759 | **FID**: 7.7552
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---

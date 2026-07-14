@@ -1,22 +1,21 @@
 # LemGendary MPRNet Deraining
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-1-orange) ![Resolution](https://img.shields.io/badge/Res-384x384-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-1-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
 
 ## Overview
 
-The **LemGendary MPRNet Deraining** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite. 
+The **LemGendary MPRNet Deraining** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: MPRNet (Standard Backbone)
-- **Input Resolution**: 384x384
+- **Input Resolution**: 256x256
 - **Use Case**: MPRNet image deraining
 - **Training Data**: LemGendizedMprNetDeraining
 
 ## Manifold Topology
 
-
 ```mermaid
 graph TD
-    Input[RGB Input 384x384] --> Backbone[MPRNet]
+    Input[RGB Input 256x256] --> Backbone[MPRNet]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Restoration Head]
     Head --> Output[Predictive Array]
@@ -24,9 +23,6 @@ graph TD
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
-
-
-
 
 ## Usage
 
@@ -77,7 +73,7 @@ restored_img.save("restored.png")
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring.
+- **Stability**: Trained using **L1 Loss** to enforce strict manifold alignment.
 
 ## Data Manifest
 
@@ -85,7 +81,7 @@ restored_img.save("restored.png")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 36.288715298315324 | **SSIM**: 0.9898187518119812 | **LPIPS**: 0.02036878087753832
+- **Baseline Achievement**: **PSNR**: 36.29 | **SSIM**: 0.9898 | **LPIPS**: 0.0204 | **FID**: 4.8524
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---

@@ -4,7 +4,7 @@
 
 ## Overview
 
-The **LemGendary Universal Film Restorer** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite. 
+The **LemGendary Universal Film Restorer** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: UniversalFilmRestorer (Standard Backbone)
 - **Input Resolution**: 256x256
@@ -12,7 +12,6 @@ The **LemGendary Universal Film Restorer** is a professional-grade AI model opti
 - **Training Data**: LemGendizedFilmRestorer
 
 ## Manifold Topology
-
 
 ```mermaid
 graph TD
@@ -24,9 +23,6 @@ graph TD
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
-
-
-
 
 ## Usage
 
@@ -77,7 +73,7 @@ restored_img.save("restored.png")
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring.
+- **Stability**: Trained using **L1_LPIPS Loss** to enforce strict manifold alignment.
 
 ## Data Manifest
 
@@ -85,7 +81,7 @@ restored_img.save("restored.png")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 21.989061317687472 | **SSIM**: 0.5813854336738586 | **LPIPS**: 0.5340118357549013
+- **Baseline Achievement**: **PSNR**: 21.99 | **SSIM**: 0.5814 | **LPIPS**: 0.5340 | **FID**: 0.0000
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---

@@ -4,7 +4,7 @@
 
 ## Overview
 
-The **LemGendary UltraZoom Master Model** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite. 
+The **LemGendary UltraZoom Master Model** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: UltraZoomMaster (Standard Backbone)
 - **Input Resolution**: 256x256
@@ -12,7 +12,6 @@ The **LemGendary UltraZoom Master Model** is a professional-grade AI model optim
 - **Training Data**: LemGendizedUltraZoom
 
 ## Manifold Topology
-
 
 ```mermaid
 graph TD
@@ -24,9 +23,6 @@ graph TD
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
-
-
-
 
 ## Usage
 
@@ -77,7 +73,7 @@ restored_img.save("restored.png")
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring.
+- **Stability**: Trained using **MSE Loss** to enforce strict manifold alignment.
 
 ## Data Manifest
 
@@ -85,7 +81,7 @@ restored_img.save("restored.png")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 12.811995974139673 | **SSIM**: 0.26031294465065 | **LPIPS**: 0.7451102955441644
+- **Baseline Achievement**: **PSNR**: 12.81 | **SSIM**: 0.2603 | **LPIPS**: 0.7451 | **FID**: 105.2753
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---

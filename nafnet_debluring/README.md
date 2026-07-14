@@ -1,6 +1,6 @@
 # LemGendary NAFNet Debluring
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-16-orange) ![Resolution](https://img.shields.io/badge/Res-384x384-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-19-orange) ![Resolution](https://img.shields.io/badge/Res-384x384-blueviolet)
 
 ## Overview
 
@@ -71,7 +71,7 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 16 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 19 total epochs securely.
 
 ## Model Stats
 
@@ -85,7 +85,7 @@ restored_img.save("restored.png")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 33.3901428618235 | **SSIM**: 0.9744920134544373 | **LPIPS**: 0.03968301580946961
+- **Baseline Achievement**: **PSNR**: 33.39674013274422 | **SSIM**: 0.9744345545768738 | **LPIPS**: 0.0396591134478803
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---

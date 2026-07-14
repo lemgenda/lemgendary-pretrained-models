@@ -4,7 +4,7 @@
 
 ## Overview
 
-The **LemGendary CodeFormer Face Restoration** is a professional-grade AI model optimized for the `face` lifecycle within the LemGendary Training Suite. 
+The **LemGendary CodeFormer Face Restoration** is a professional-grade AI model optimized for the `face` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: CodeFormer (Standard Backbone)
 - **Input Resolution**: 224x224
@@ -12,7 +12,6 @@ The **LemGendary CodeFormer Face Restoration** is a professional-grade AI model 
 - **Training Data**: LemGendizedCodeFormer
 
 ## Manifold Topology
-
 
 ```mermaid
 graph TD
@@ -24,9 +23,6 @@ graph TD
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
-
-
-
 
 ## Usage
 
@@ -50,7 +46,7 @@ graph TD
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring.
+- **Stability**: Trained using **MSE Loss** to enforce strict manifold alignment.
 
 ## Data Manifest
 
@@ -58,7 +54,7 @@ graph TD
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 30.083255667633814 | **SSIM**: 0.7873335480690002 | **LPIPS**: 0.3903340765510697
+- **Baseline Achievement**: **PSNR**: 30.08 | **SSIM**: 0.7873 | **LPIPS**: 0.3903 | **FID**: 82.0017
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---

@@ -4,7 +4,7 @@
 
 ## Overview
 
-The **LemGendary NIMA Aesthetic Scorer (EfficientNetV2-S)** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite. 
+The **LemGendary NIMA Aesthetic Scorer (EfficientNetV2-S)** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: NIMA_Model (EfficientNetV2-S (Global Composition))
 - **Input Resolution**: 224x224
@@ -12,7 +12,6 @@ The **LemGendary NIMA Aesthetic Scorer (EfficientNetV2-S)** is a professional-gr
 - **Training Data**: LemGendizedNimaAesthetic
 
 ## Manifold Topology
-
 
 ```mermaid
 graph TD
@@ -25,11 +24,9 @@ graph TD
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
 
-
 > [!IMPORTANT]
 > **Quality Vector**: This model is specialized for **Aesthetics**. 
 > - **Primary Targets**: Composition, Color, Lighting, Artistic Intent.
-
 
 ## Usage
 
@@ -81,7 +78,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring.
+- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 1.0 Temperature Anchoring.
 
 ## Data Manifest
 
@@ -89,7 +86,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PLCC**: 0.4689673185348511 | **SRCC**: 0.5090901256719031
+- **Baseline Achievement**: **PLCC**: 0.4690 | **SRCC**: 0.5091
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---

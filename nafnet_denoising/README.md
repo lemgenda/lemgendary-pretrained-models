@@ -1,22 +1,21 @@
 # LemGendary NAFNet Denoising
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-22-orange) ![Resolution](https://img.shields.io/badge/Res-640x640-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-21-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
-The **LemGendary NAFNet Denoising** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite. 
+The **LemGendary NAFNet Denoising** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: NAFNet (Standard Backbone)
-- **Input Resolution**: 640x640
+- **Input Resolution**: 512x512
 - **Use Case**: NAFNet image denoising
 - **Training Data**: LemGendizedNafNetDenoising
 
 ## Manifold Topology
 
-
 ```mermaid
 graph TD
-    Input[RGB Input 640x640] --> Backbone[NAFNet]
+    Input[RGB Input 512x512] --> Backbone[NAFNet]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Restoration Head]
     Head --> Output[Predictive Array]
@@ -24,9 +23,6 @@ graph TD
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
-
-
-
 
 ## Usage
 
@@ -45,7 +41,7 @@ state = ckpt.get('model_state', ckpt) if isinstance(ckpt, dict) else ckpt
 # 3. Initialization
 from models.factory import create_model
 model = create_model("nafnet_denoising").to(device)
-if device.type == \'cuda\' and torch.cuda.device_count() > 1:
+if device.type == 'cuda' and torch.cuda.device_count() > 1:
     model = torch.nn.DataParallel(model)
 model.load_state_dict(state)
 model.eval()
@@ -71,13 +67,13 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 22 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 21 total epochs securely.
 
 ## Model Stats
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring.
+- **Stability**: Trained using **L1 Loss** to enforce strict manifold alignment.
 
 ## Data Manifest
 
@@ -85,7 +81,7 @@ restored_img.save("restored.png")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 51.451095837071094 | **SSIM**: 0.9996803402900696 | **LPIPS**: 0.002198543873857017
+- **Baseline Achievement**: **PSNR**: 51.60 | **SSIM**: 0.9997 | **LPIPS**: 0.0019 | **FID**: 1.8097
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---

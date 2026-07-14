@@ -4,7 +4,7 @@
 
 ## Overview
 
-The **LemGendary UPN v2 Parameter Predictor** is a professional-grade AI model optimized for the `parameter_prediction` lifecycle within the LemGendary Training Suite. 
+The **LemGendary UPN v2 Parameter Predictor** is a professional-grade AI model optimized for the `parameter_prediction` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: UPN_v2 (Standard Backbone)
 - **Input Resolution**: 128x128
@@ -12,7 +12,6 @@ The **LemGendary UPN v2 Parameter Predictor** is a professional-grade AI model o
 - **Training Data**: LemGendizedUpnV2
 
 ## Manifold Topology
-
 
 ```mermaid
 graph TD
@@ -24,9 +23,6 @@ graph TD
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
-
-
-
 
 ## Usage
 
@@ -50,7 +46,7 @@ graph TD
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring.
+- **Stability**: Trained using **SMOOTH_L1 Loss** to enforce strict manifold alignment.
 
 ## Data Manifest
 
@@ -58,7 +54,7 @@ graph TD
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: -0.4077130212205564 | **SSIM**: 0.0 | **LPIPS**: 0.0
+- **Baseline Achievement**: **PSNR**: -0.41 | **SSIM**: 0.0000 | **LPIPS**: 0.0000 | **FID**: 0.0000
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
