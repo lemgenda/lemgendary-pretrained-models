@@ -1,13 +1,13 @@
 # LemGendary NAFNet Debluring
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-71-orange) ![Resolution](https://img.shields.io/badge/Res-768x768-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-1-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
 
 ## Overview
 
 The **LemGendary NAFNet Debluring** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite. 
 
 - **Architecture**: NAFNet (Standard Backbone)
-- **Input Resolution**: 768x768
+- **Input Resolution**: 256x256
 - **Use Case**: NAFNet image debluring
 - **Training Data**: LemGendizedNafNetDebluring
 
@@ -16,7 +16,7 @@ The **LemGendary NAFNet Debluring** is a professional-grade AI model optimized f
 
 ```mermaid
 graph TD
-    Input[RGB Input 768x768] --> Backbone[NAFNet]
+    Input[RGB Input 256x256] --> Backbone[NAFNet]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Restoration Head]
     Head --> Output[Predictive Array]
@@ -45,6 +45,8 @@ state = ckpt.get('model_state', ckpt) if isinstance(ckpt, dict) else ckpt
 # 3. Initialization
 from models.factory import create_model
 model = create_model("nafnet_debluring").to(device)
+if device.type == 'cuda' and torch.cuda.device_count() > 1:
+    model = torch.nn.DataParallel(model)
 model.load_state_dict(state)
 model.eval()
 
@@ -69,7 +71,7 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 71 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 1 total epochs securely.
 
 ## Model Stats
 
@@ -83,7 +85,7 @@ restored_img.save("restored.png")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 33.44054285861995 | **SSIM**: 0.9738211631774902 | **LPIPS**: 0.04363557265673084
+- **Baseline Achievement**: **PSNR**: 30.051252341798666 | **SSIM**: 0.8994162678718567 | **LPIPS**: 0.23648718031044316
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
