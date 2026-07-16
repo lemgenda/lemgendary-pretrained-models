@@ -1,22 +1,21 @@
 # LemGendary NAFNet Debluring
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-19-orange) ![Resolution](https://img.shields.io/badge/Res-384x384-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-42-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
-The **LemGendary NAFNet Debluring** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite. 
+The **LemGendary NAFNet Debluring** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: NAFNet (Standard Backbone)
-- **Input Resolution**: 384x384
+- **Input Resolution**: 512x512
 - **Use Case**: NAFNet image debluring
 - **Training Data**: LemGendizedNafNetDebluring
 
 ## Manifold Topology
 
-
 ```mermaid
 graph TD
-    Input[RGB Input 384x384] --> Backbone[NAFNet]
+    Input[RGB Input 512x512] --> Backbone[NAFNet]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Restoration Head]
     Head --> Output[Predictive Array]
@@ -24,9 +23,6 @@ graph TD
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
 ```
-
-
-
 
 ## Usage
 
@@ -71,13 +67,13 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 19 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 42 total epochs securely.
 
 ## Model Stats
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.1 Temperature Anchoring.
+- **Stability**: Trained using **L1 Loss** to enforce strict manifold alignment.
 
 ## Data Manifest
 
@@ -85,7 +81,7 @@ restored_img.save("restored.png")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 33.39674013274422 | **SSIM**: 0.9744345545768738 | **LPIPS**: 0.0396591134478803
+- **Baseline Achievement**: **PSNR**: 33.40022429486456 | **SSIM**: 0.9745889902114868 | **LPIPS**: 0.03947597312223724 | **FID**: 1.9730747938156128
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
