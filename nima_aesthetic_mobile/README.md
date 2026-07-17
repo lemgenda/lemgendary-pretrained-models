@@ -1,6 +1,6 @@
 # LemGendary NIMA Aesthetic Scorer (Mobile)
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-30-orange) ![Resolution](https://img.shields.io/badge/Res-224x224-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-88-orange) ![Resolution](https://img.shields.io/badge/Res-224x224-blueviolet)
 
 ## Overview
 
@@ -72,13 +72,13 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 30 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 88 total epochs securely.
 
 ## Model Stats
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 1.0 Temperature Anchoring.
+- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.545336550974024 Temperature Anchoring.
 
 ## Data Manifest
 
@@ -86,7 +86,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PLCC**: 0.4722 | **SRCC**: 0.4641
+- **Baseline Achievement**: **PLCC**: 0.4633577764034271 | **SRCC**: 0.47793830268362525
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
