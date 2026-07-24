@@ -1,6 +1,6 @@
 # LemGendary NIMA Technical Scorer
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-27-orange) ![Resolution](https://img.shields.io/badge/Res-384x384-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-82-orange) ![Resolution](https://img.shields.io/badge/Res-384x384-blueviolet)
 
 ## Overview
 
@@ -25,8 +25,7 @@ graph TD
 ```
 
 > [!IMPORTANT]
-> **Quality Vector**: This model is specialized for **Technical Integrity**.
->
+> **Quality Vector**: This model is specialized for **Technical Integrity**. 
 > - **Primary Targets**: Noise, Blur, Compression, Sharpness.
 
 ## Usage
@@ -73,13 +72,13 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 27 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 82 total epochs securely.
 
 ## Model Stats
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.96 Temperature Anchoring and Governor v16.3.3 Autonomous Anti-Loop Breakout (Dynamic Resolution Escalation `256px -> 384px`).
+- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 1.0 Temperature Anchoring.
 
 ## Data Manifest
 
@@ -87,7 +86,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PLCC**: 0.6027489304542542 | **SRCC**: 0.6507558186359289
+- **Baseline Achievement**: **PLCC**: 0.5984006524085999 | **SRCC**: 0.6935319900742578
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
