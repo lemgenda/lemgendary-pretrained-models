@@ -25,7 +25,8 @@ graph TD
 ```
 
 > [!IMPORTANT]
-> **Quality Vector**: This model is specialized for **Technical Integrity**. 
+> **Quality Vector**: This model is specialized for **Technical Integrity**.
+>
 > - **Primary Targets**: Noise, Blur, Compression, Sharpness.
 
 ## Usage
