@@ -78,7 +78,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.96 Temperature Anchoring.
+- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.96 Temperature Anchoring and Governor v16.3.3 Autonomous Anti-Loop Breakout (Dynamic Resolution Escalation `256px -> 384px`).
 
 ## Data Manifest
 
