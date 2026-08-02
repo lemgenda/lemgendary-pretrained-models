@@ -1,13 +1,13 @@
 # LemGendary MPRNet Deraining
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-22-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-22-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
 The **LemGendary MPRNet Deraining** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: MPRNet (Standard Backbone)
-- **Input Resolution**: 256x256
+- **Input Resolution**: 512x512 (Dynamic Curriculum Ceiling)
 - **Use Case**: MPRNet image deraining
 - **Training Data**: LemGendizedMprNetDeraining
 
