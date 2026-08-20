@@ -1,5 +1,5 @@
-# [LM-HUB] [VERSION 2.0.0] [PRETRAINED]
-# High-fidelity weights are tracked via Git LFS
+# [LM-HUB] [VERSION 3.0.0] [PRETRAINED]
+# Model weights and binaries are distributed via GitHub Releases and Kaggle Model Hub
 
 # 1. Block Local OS Garbage
 .DS_Store
@@ -13,14 +13,18 @@ __pycache__/
 *.log
 checkpoints/
 
-# 3. Block Shadow Directories
-LemGendaryModels/
+# 3. Model Weights & Binary Exports (Distributed via GitHub Releases & Kaggle)
+*.pth
+*.onnx
+*.pt
+*.data
+*.safetensors
+*.bin
 
-# 4. Allow High-Fidelity Weights (PRODUCTION)
-# Ensure we DO NOT block .pth and .onnx here as they are the Hub purpose
-!*.pth
-!*.onnx
-
-#GitHub PAT
+# 4. Secrets & Auth Tokens
 .GITHUB_PAT
 .SUITE_PAT
+.SATURN_PAT
+.kaggle_token
+*.key
+kaggle.json
