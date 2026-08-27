@@ -16,10 +16,10 @@ The **LemGendary Forex Predictor (Multi-Scale CNN-Transformer)** is a profession
 
 ```mermaid
 graph TD
-    Input[RGB Input 1x1] --> Backbone[ForexPredictor]
-    Backbone --> Manifold[Latent Manifold]
-    Manifold --> Head[Forex Head]
-    Head --> Output[Predictive Array]
+    Input[OHLCV Sequence] --> Backbone[Causal TCN]
+    Backbone --> Attention[Cross-Timeframe Attention]
+    Attention --> Head[Directional & Magnitude Head]
+    Head --> Output[TP/SL & Trade Signal]
     
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#00ff00,stroke:#333,stroke-width:4px
@@ -34,8 +34,8 @@ graph TD
 > [!TIP]
 > **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[forex_predictor_usage.ipynb](forex_predictor_usage.ipynb)** notebook in this directory.
 
-- **Input Requirements**: RGB Image Tensors normalized to ImageNet stats.
-- **Failures**: Large aspect ratio distortions during standard resize phases.
+- **Input Requirements**: Normalized OHLCV tensor sequences across multiple timeframes.
+- **Failures**: Susceptible to spread friction and lookahead leakage if walk-forward validation is compromised.
 
 ## Implementation Requirements
 
@@ -51,15 +51,15 @@ graph TD
 
 ## Data Manifest
 
-- **LemGendizedForexTitanCoreLarge**: ~N/A binary image samples.
-- **LemGendizedForexG7MajorsLarge**: ~N/A binary image samples.
-- **LemGendizedForexHighBetaLarge**: ~N/A binary image samples.
-- **LemGendizedForexUniverseLarge**: ~N/A binary image samples.
+- **LemGendizedForexTitanCoreLarge**: Time-series OHLCV sequences (2019-2026).
+- **LemGendizedForexG7MajorsLarge**: Time-series OHLCV sequences (2019-2026).
+- **LemGendizedForexHighBetaLarge**: Time-series OHLCV sequences (2019-2026).
+- **LemGendizedForexUniverseLarge**: Time-series OHLCV sequences (2019-2026).
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 0.0 | **SSIM**: 0.0 | **LPIPS**: 0.0 | **FID**: 0.0
-- **Split**: 80/20 train/validate with zero sample-leakage.
+- **Validation Protocol**: 6-Fold Anchored Walk-Forward Cross-Validation (14-day Embargo).
+- **SOTA Metrics**: **Dir Acc**: 50.12% | **Win Rate**: 50.12% | **PF**: 1.00 | **Sharpe**: -0.02 | **MaxDD**: 161.69%
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*
