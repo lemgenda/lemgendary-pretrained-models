@@ -1,6 +1,6 @@
 # LemGendary Forex Predictor (Multi-Scale CNN-Transformer)
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-4-orange) ![Resolution](https://img.shields.io/badge/Res-1x1-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-59-orange) ![Resolution](https://img.shields.io/badge/Res-1x1-blueviolet)
 
 ## Overview
 
@@ -41,7 +41,7 @@ graph TD
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 4 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 59 total epochs securely.
 
 ## Model Stats
 
@@ -51,15 +51,15 @@ graph TD
 
 ## Data Manifest
 
-- **LemGendizedForexTitanCoreLarge**: Time-series OHLCV sequences (2019-2026).
-- **LemGendizedForexG7MajorsLarge**: Time-series OHLCV sequences (2019-2026).
-- **LemGendizedForexHighBetaLarge**: Time-series OHLCV sequences (2019-2026).
-- **LemGendizedForexUniverseLarge**: Time-series OHLCV sequences (2019-2026).
+- **LemGendizedForexTitanCoreLarge**: ~N/A time-series OHLCV sequences (2019-2026).
+- **LemGendizedForexG7MajorsLarge**: ~N/A time-series OHLCV sequences (2019-2026).
+- **LemGendizedForexHighBetaLarge**: ~N/A time-series OHLCV sequences (2019-2026).
+- **LemGendizedForexUniverseLarge**: ~N/A time-series OHLCV sequences (2019-2026).
 
 ## Evaluation Results
 
+- **SOTA Metrics**: **Dir Acc**: 50.0% | **Win Rate**: 50.0% | **PF**: 1.0 | **Sharpe**: 0.0 | **MaxDD**: 0.0%
 - **Validation Protocol**: 6-Fold Anchored Walk-Forward Cross-Validation (14-day Embargo).
-- **SOTA Metrics**: **Dir Acc**: 50.12% | **Win Rate**: 50.12% | **PF**: 1.00 | **Sharpe**: -0.02 | **MaxDD**: 161.69%
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*
