@@ -1,6 +1,6 @@
 # LemGendary AI Training Matrix
 
-Auto-generated live dashboard | Last Updated: 2026-08-28 01:29:32
+Auto-generated live dashboard | Last Updated: 2026-08-28 15:42:27
 
 ## Completed (SOTA Targets Achieved)
 
@@ -15,14 +15,14 @@ Models that have fully satisfied their strict target benchmarks and exported the
 
 Models actively scaling the resolution ladder and optimizing weights across dataset manifolds.
 
-| Model | Completeness | Epochs | Data Fraction | Resolution |
+| Model | Completeness | Epochs | Data / Phase | Res / Fold |
 | --- | --- | --- | --- | --- |
-| LemGendary NIMA Technical Scorer | **99.0%** | 381 | 100% | 512px |
+| LemGendary NIMA Technical Scorer | **98.7%** | 398 | 100% | 512px |
 | LemGendary NIMA Aesthetic Scorer (Pro ViT) | **94.1%** | 53 | 100% | 512px |
 | LemGendary MIRNet v2 Exposure Correction | **91.5%** | 37 | 75% | 512px |
 | LemGendary NIMA Aesthetic Scorer (Mobile) | **90.7%** | 177 | 100% | 224px |
-| LemGendary Forex Predictor (Multi-Scale CNN-Transformer) | **75.7%** | 56 | 100% | 1440px |
 | LemGendary NIMA Aesthetic Scorer (EfficientNetV2-S) | **66.5%** | 49 | 75% | 224px |
+| LemGendary Forex Predictor (Multi-Scale CNN-Transformer) | **28.6%** | 60 | Phase 1 | Fold 2 |
 
 ## Not Started
 
