@@ -11,13 +11,13 @@ __pycache__/
 .ipynb_checkpoints/
 *.tmp
 *.log
-checkpoints/
+# checkpoints/
 
 # 3. Model Weights & Binary Exports (Distributed via GitHub Releases & Kaggle)
-*.pth
-*.onnx
-*.pt
-*.data
+# *.pth
+# *.onnx
+# *.pt
+# *.data
 *.safetensors
 *.bin
 
