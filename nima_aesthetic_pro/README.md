@@ -25,7 +25,8 @@ graph TD
 ```
 
 > [!IMPORTANT]
-> **Quality Vector**: This model is specialized for **Aesthetics**. 
+> **Quality Vector**: This model is specialized for **Aesthetics**.
+>
 > - **Primary Targets**: Composition, Color, Lighting, Artistic Intent.
 
 ## Usage
