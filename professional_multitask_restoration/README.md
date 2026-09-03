@@ -1,21 +1,21 @@
-# LemGendary FFANet Dehazing (Outdoor)
+# LemGendary Professional Multi-Task Restoration Model
 
 ![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-3-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
 
 ## Overview
 
-The **LemGendary FFANet Dehazing (Outdoor)** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
+The **LemGendary Professional Multi-Task Restoration Model** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: BranchedFFANet (Standard Backbone)
+- **Architecture**: MultiTaskRestorer (Standard Backbone)
 - **Input Resolution**: 256x256
-- **Use Case**: FFANet outdoor dehazing restoration
-- **Training Data**: LemGendizedFfaNetOutdoorLarge
+- **Use Case**: Shared Encoder Multi-Task model for Denoise, Deblur, Derain, Dehaze, and Low-Light
+- **Training Data**: LemGendizedNafNetDebluringLarge, LemGendizedFfaNetIndoorLarge, LemGendizedMirNetLowLightLarge, LemGendizedNafNetDenoisingLarge
 
 ## Manifold Topology
 
 ```mermaid
 graph TD
-    Input[RGB Input 256x256] --> Backbone[BranchedFFANet]
+    Input[RGB Input 256x256] --> Backbone[MultiTaskRestorer]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Restoration Head]
     Head --> Output[Predictive Array]
@@ -34,13 +34,13 @@ from PIL import Image
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # 2. Stealth Load (v16.0)
-model_path = "ffanet_outdoor_latest.pth"
+model_path = "professional_multitask_restoration_latest.pth"
 ckpt = torch.load(model_path, map_location=device, weights_only=False)
 state = ckpt.get('model_state', ckpt) if isinstance(ckpt, dict) else ckpt
 
 # 3. Initialization
 from models.factory import create_model
-model = create_model("ffanet_outdoor").to(device)
+model = create_model("professional_multitask_restoration").to(device)
 if device.type == 'cuda' and torch.cuda.device_count() > 1:
     model = torch.nn.DataParallel(model)
 model.load_state_dict(state)
@@ -58,7 +58,7 @@ restored_img.save("restored.png")
 ```
 
 > [!TIP]
-> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[ffanet_outdoor_usage.ipynb](ffanet_outdoor_usage.ipynb)** notebook in this directory.
+> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[professional_multitask_restoration_usage.ipynb](professional_multitask_restoration_usage.ipynb)** notebook in this directory.
 
 - **Input Requirements**: RGB Image Tensors normalized to ImageNet stats.
 - **Failures**: Large aspect ratio distortions during standard resize phases.
@@ -73,11 +73,14 @@ restored_img.save("restored.png")
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **L1 Loss** to enforce strict manifold alignment.
+- **Stability**: Trained using **HYBRID_RESTORATION Loss** to enforce strict manifold alignment.
 
 ## Data Manifest
 
-- **LemGendizedFfaNetOutdoorLarge**: ~N/A binary image samples.
+- **LemGendizedNafNetDebluringLarge**: ~N/A binary image samples.
+- **LemGendizedFfaNetIndoorLarge**: ~N/A binary image samples.
+- **LemGendizedMirNetLowLightLarge**: ~N/A binary image samples.
+- **LemGendizedNafNetDenoisingLarge**: ~N/A binary image samples.
 
 ## Evaluation Results
 

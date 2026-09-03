@@ -1,13 +1,13 @@
 # LemGendary Forex Predictor (Multi-Scale CNN-Transformer)
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-3-orange) ![Resolution](https://img.shields.io/badge/Res-1x1-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-1-orange) ![Resolution](https://img.shields.io/badge/Res-NonexNone-blueviolet)
 
 ## Overview
 
 The **LemGendary Forex Predictor (Multi-Scale CNN-Transformer)** is a professional-grade AI model optimized for the `forex` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: ForexPredictor (Multi-Scale CNN-Transformer (Causal TCN + Cross-Timeframe Attention))
-- **Input Resolution**: 1x1
+- **Input Resolution**: NonexNone
 - **Use Case**: Multi-pair, multi-timeframe Forex trading model trained on MetaTrader 5 OHLCV data. Predicts trade direction (Up/Down/Sideways) and magnitude (TP/SL pips) for all major currency pairs. Architecture uses causal Conv1D stacks per timeframe fused via cross-timeframe attention. Fully stateless and ONNX-compatible for live MT5 EA deployment.
 
 - **Training Data**: LemGendizedForexTitanCoreLarge, LemGendizedForexG7MajorsLarge, LemGendizedForexHighBetaLarge, LemGendizedForexUniverseLarge
@@ -41,7 +41,7 @@ graph TD
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 3 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 1 total epochs securely.
 
 ## Model Stats
 

@@ -1,23 +1,23 @@
-# LemGendary UPN v2 Parameter Predictor
+# LemGendary RetinaFace MobileNet Detection
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-3-orange) ![Resolution](https://img.shields.io/badge/Res-128x128-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-3-orange) ![Resolution](https://img.shields.io/badge/Res-640x640-blueviolet)
 
 ## Overview
 
-The **LemGendary UPN v2 Parameter Predictor** is a professional-grade AI model optimized for the `parameter_prediction` lifecycle within the LemGendary Training Suite.
+The **LemGendary RetinaFace MobileNet Detection** is a professional-grade AI model optimized for the `face_detection` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: UPN_v2 (Standard Backbone)
-- **Input Resolution**: 128x128
-- **Use Case**: Universal parameter predictor for image restoration
-- **Training Data**: LemGendizedUpnV2Large
+- **Architecture**: RetinaFace (Standard Backbone)
+- **Input Resolution**: 640x640
+- **Use Case**: MobileNet-based face detection
+- **Training Data**: LemGendizedRetinaFaceMobileNetLarge
 
 ## Manifold Topology
 
 ```mermaid
 graph TD
-    Input[RGB Input 128x128] --> Backbone[UPN_v2]
+    Input[RGB Input 640x640] --> Backbone[RetinaFace]
     Backbone --> Manifold[Latent Manifold]
-    Manifold --> Head[Parameter_prediction Head]
+    Manifold --> Head[Face_detection Head]
     Head --> Output[Predictive Array]
     
     style Input fill:#f9f,stroke:#333,stroke-width:2px
@@ -31,7 +31,7 @@ graph TD
 ```
 
 > [!TIP]
-> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[upn_v2_usage.ipynb](upn_v2_usage.ipynb)** notebook in this directory.
+> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[retinaface_mobilenet_usage.ipynb](retinaface_mobilenet_usage.ipynb)** notebook in this directory.
 
 - **Input Requirements**: RGB Image Tensors normalized to ImageNet stats.
 - **Failures**: Large aspect ratio distortions during standard resize phases.
@@ -46,11 +46,11 @@ graph TD
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **SMOOTH_L1 Loss** to enforce strict manifold alignment.
+- **Stability**: Trained using **RETINAFACE Loss** to enforce strict manifold alignment.
 
 ## Data Manifest
 
-- **LemGendizedUpnV2Large**: ~N/A binary image samples.
+- **LemGendizedRetinaFaceMobileNetLarge**: ~N/A binary image samples.
 
 ## Evaluation Results
 

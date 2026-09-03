@@ -1,21 +1,21 @@
 # LemGendary NIMA Technical Scorer
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-303-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-465-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
 
 ## Overview
 
 The **LemGendary NIMA Technical Scorer** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: NIMA_Model (EfficientNetV2-S (Spatial Integrity))
-- **Input Resolution**: 512x512
+- **Input Resolution**: 256x256
 - **Use Case**: Technical quality scorer trained on custom standardized LemGendizedQualityDataset, optimized for detecting micro-defects, noise, and artifacts.
-- **Training Data**: LemGendizedNimaTechnical
+- **Training Data**: LemGendizedNimaTechnicalLarge
 
 ## Manifold Topology
 
 ```mermaid
 graph TD
-    Input[RGB Input 512x512] --> Backbone[NIMA_Model]
+    Input[RGB Input 256x256] --> Backbone[NIMA_Model]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Quality Head]
     Head --> Output[Predictive Array]
@@ -52,7 +52,7 @@ model.load_state_dict(state)
 model.eval()
 
 # 4. Forward Pass
-img = Image.open("photo.jpg").convert('RGB').resize((512, 512))
+img = Image.open("photo.jpg").convert('RGB').resize((256, 256))
 input_tensor = torch.from_numpy(np.array(img)).permute(2,0,1).float().unsqueeze(0).to(device) / 255.0
 with torch.no_grad():
     probs = model(input_tensor)
@@ -73,21 +73,21 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 303 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 465 total epochs securely.
 
 ## Model Stats
 
 - **Precision**: ONNX FP16 (Edge) / PyTorch FP32 (Training).
 - **Latency**: Sub-50ms inference bound on target local GPU hardware.
-- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 0.96 Temperature Anchoring.
+- **Stability**: Trained using **Earth Mover's Distance (EMD)** with strict 1.0 Temperature Anchoring.
 
 ## Data Manifest
 
-- **LemGendizedNimaTechnical**: ~N/A binary image samples.
+- **LemGendizedNimaTechnicalLarge**: ~N/A binary image samples.
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PLCC**: 0.9140843749046326 | **SRCC**: 0.819212700486702
+- **Baseline Achievement**: **PLCC**: 0.90+ | **SRCC**: 0.83+
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---

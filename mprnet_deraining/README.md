@@ -1,15 +1,15 @@
 # LemGendary MPRNet Deraining
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-22-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-3-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
 
 ## Overview
 
 The **LemGendary MPRNet Deraining** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: MPRNet (Standard Backbone)
-- **Input Resolution**: 512x512 (Dynamic Curriculum Ceiling)
+- **Input Resolution**: 256x256
 - **Use Case**: MPRNet image deraining
-- **Training Data**: LemGendizedMprNetDeraining
+- **Training Data**: LemGendizedMprNetDerainingLarge
 
 ## Manifold Topology
 
@@ -67,7 +67,7 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 22 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 3 total epochs securely.
 
 ## Model Stats
 
@@ -77,11 +77,11 @@ restored_img.save("restored.png")
 
 ## Data Manifest
 
-- **LemGendizedMprNetDeraining**: ~N/A binary image samples.
+- **LemGendizedMprNetDerainingLarge**: ~N/A binary image samples.
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 53.95059593836479 | **SSIM**: 0.999610960483551 | **LPIPS**: 0.0012836921489349932 | **FID**: 0.2271563708782196
+- **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 2.5-
 - **Split**: 80/20 train/validate with zero sample-leakage.
 
 ---
