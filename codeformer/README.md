@@ -1,6 +1,6 @@
 # LemGendary CodeFormer Face Restoration
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-1-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-4-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
@@ -40,7 +40,7 @@ graph TD
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 1 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 4 total epochs securely.
 
 ## Model Stats
 

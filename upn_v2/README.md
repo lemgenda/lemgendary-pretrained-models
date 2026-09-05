@@ -1,6 +1,6 @@
 # LemGendary UPN v2 Parameter Predictor
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-3-orange) ![Resolution](https://img.shields.io/badge/Res-128x128-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-1-orange) ![Resolution](https://img.shields.io/badge/Res-128x128-blueviolet)
 
 ## Overview
 
@@ -40,7 +40,7 @@ graph TD
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 3 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 1 total epochs securely.
 
 ## Model Stats
 

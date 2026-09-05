@@ -1,6 +1,6 @@
 # LemGendary AI Training Matrix
 
-Auto-generated live dashboard | Last Updated: 2026-09-03 10:00:20
+Auto-generated live dashboard | Last Updated: 2026-09-06 00:26:11
 
 ## Completed (SOTA Targets Achieved)
 
@@ -19,11 +19,10 @@ Models actively scaling the resolution ladder and optimizing weights across data
 | --- | --- | --- | --- | --- |
 | LemGendary NIMA Technical Scorer | **98.3%** | 465 | 100% | 512px |
 | LemGendary NIMA Aesthetic Scorer (Pro ViT) | **94.1%** | 53 | 100% | 512px |
-| LemGendary MIRNet v2 Exposure Correction | **91.5%** | 44 | 75% | 512px |
-| LemGendary NIMA Aesthetic Scorer (Mobile) | **90.8%** | 179 | 100% | 224px |
+| LemGendary MIRNet v2 Exposure Correction | **91.7%** | 47 | 75% | 512px |
+| LemGendary NIMA Aesthetic Scorer (Mobile) | **89.8%** | 183 | 100% | 224px |
 | LemGendary CodeFormer Face Restoration | **74.8%** | 4 | 100% | 512px |
 | LemGendary NIMA Aesthetic Scorer (EfficientNetV2-S) | **66.5%** | 49 | 75% | 224px |
-| LemGendary Forex Predictor (Multi-Scale CNN-Transformer) | **22.9%** | 18 | Phase 1 | Fold 1 |
 
 ## Not Started
 
@@ -31,6 +30,7 @@ Registered matrix targets awaiting cluster allocation.
 
 - LemGendary FFANet Dehazing (Indoor)
 - LemGendary FFANet Dehazing (Outdoor)
+- LemGendary Forex Predictor (Multi-Scale CNN-Transformer)
 - LemGendary MIRNet v2 Low-Light Enhancement
 - LemGendary ParseNet Face Parsing
 - LemGendary Professional Multi-Task Restoration Model
