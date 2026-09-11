@@ -1,6 +1,6 @@
 # LemGendary AI Training Matrix
 
-Auto-generated live dashboard | Last Updated: 2026-09-06 00:26:11
+Auto-generated live dashboard | Last Updated: 2026-09-11 14:17:16
 
 ## Completed (SOTA Targets Achieved)
 
@@ -21,7 +21,7 @@ Models actively scaling the resolution ladder and optimizing weights across data
 | LemGendary NIMA Aesthetic Scorer (Pro ViT) | **94.1%** | 53 | 100% | 512px |
 | LemGendary MIRNet v2 Exposure Correction | **91.7%** | 47 | 75% | 512px |
 | LemGendary NIMA Aesthetic Scorer (Mobile) | **89.8%** | 183 | 100% | 224px |
-| LemGendary CodeFormer Face Restoration | **74.8%** | 4 | 100% | 512px |
+| LemGendary CodeFormer Face Restoration | **74.1%** | 4 | 100% | 512px |
 | LemGendary NIMA Aesthetic Scorer (EfficientNetV2-S) | **66.5%** | 49 | 75% | 224px |
 
 ## Not Started
@@ -34,7 +34,7 @@ Registered matrix targets awaiting cluster allocation.
 - LemGendary MIRNet v2 Low-Light Enhancement
 - LemGendary ParseNet Face Parsing
 - LemGendary Professional Multi-Task Restoration Model
-- LemGendary RetinaFace MobileNet Detection
+- LemGendary RetinaFace Detection
 - LemGendary UPN v2 Parameter Predictor
 - LemGendary UltraZoom Master Model
 - LemGendary Universal Film Restorer

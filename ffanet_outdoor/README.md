@@ -6,7 +6,7 @@
 
 The **LemGendary FFANet Dehazing (Outdoor)** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: BranchedFFANet (Standard Backbone)
+- **Architecture**: BranchedFFANet (BranchedFFANet (Feature Fusion Attention))
 - **Input Resolution**: 256x256
 - **Use Case**: FFANet outdoor dehazing restoration
 - **Training Data**: LemGendizedFfaNetOutdoorLarge

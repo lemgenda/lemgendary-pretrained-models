@@ -6,7 +6,7 @@
 
 The **LemGendary YOLOv8n Multi-Task Model** is a professional-grade AI model optimized for the `detection` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: YOLO (Standard Backbone)
+- **Architecture**: YOLO (YOLOv8n (CSPDarknet53 + PANet))
 - **Input Resolution**: 320x320
 - **Use Case**: Unified YOLOv8n for classification, detection, and pose
 - **Training Data**: LemGendizedYoloV8nLarge

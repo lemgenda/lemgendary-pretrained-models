@@ -6,7 +6,7 @@
 
 The **LemGendary Universal Film Restorer** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: UniversalFilmRestorer (Standard Backbone)
+- **Architecture**: UniversalFilmRestorer (UniversalFilmRestorer (Residual Dense Autoencoder))
 - **Input Resolution**: 256x256
 - **Use Case**: Universal image restoration autoencoder
 - **Training Data**: LemGendizedFilmRestorerLarge

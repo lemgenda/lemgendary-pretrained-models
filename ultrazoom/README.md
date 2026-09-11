@@ -6,7 +6,7 @@
 
 The **LemGendary UltraZoom Master Model** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: UltraZoomMaster (Standard Backbone)
+- **Architecture**: UltraZoomMaster (UltraZoomMaster (Sub-Pixel ESPCN Super-Resolution))
 - **Input Resolution**: 256x256
 - **Use Case**: Dynamic scale super-resolution model
 - **Training Data**: LemGendizedUltraZoomLarge

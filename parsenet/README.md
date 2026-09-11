@@ -6,7 +6,7 @@
 
 The **LemGendary ParseNet Face Parsing** is a professional-grade AI model optimized for the `segmentation` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: ParseNet (Standard Backbone)
+- **Architecture**: ParseNet (ParseNet (Bilateral Face Segmentation Network))
 - **Input Resolution**: 512x512
 - **Use Case**: Face parsing model for segmentation
 - **Training Data**: LemGendizedParseNetLarge

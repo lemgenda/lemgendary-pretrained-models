@@ -6,7 +6,7 @@
 
 The **LemGendary CodeFormer Face Restoration** is a professional-grade AI model optimized for the `face` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: CodeFormer (Standard Backbone)
+- **Architecture**: CodeFormer (CodeFormer (Transformer-Based Face Restoration))
 - **Input Resolution**: 512x512
 - **Use Case**: Face restoration model
 - **Training Data**: LemGendizedCodeFormerLarge

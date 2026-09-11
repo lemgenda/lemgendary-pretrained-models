@@ -6,7 +6,7 @@
 
 The **LemGendary MIRNet v2 Exposure Correction** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: MIRNet (Standard Backbone)
+- **Architecture**: MIRNet (MIRNet_v2 (Multi-Scale Residual Network))
 - **Input Resolution**: 256x256
 - **Use Case**: MIRNet v2 for overexposure correction and dynamic range adjustment
 - **Training Data**: LemGendizedMirNetExposureLarge

@@ -6,7 +6,7 @@
 
 The **LemGendary UPN v2 Parameter Predictor** is a professional-grade AI model optimized for the `parameter_prediction` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: UPN_v2 (Standard Backbone)
+- **Architecture**: UPN_v2 (UPN_v2 (MobileNet-Lite Parameter Regressor))
 - **Input Resolution**: 128x128
 - **Use Case**: Universal parameter predictor for image restoration
 - **Training Data**: LemGendizedUpnV2Large

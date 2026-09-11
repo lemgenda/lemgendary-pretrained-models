@@ -6,10 +6,10 @@
 
 The **LemGendary Professional Multi-Task Restoration Model** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: MultiTaskRestorer (Standard Backbone)
+- **Architecture**: MultiTaskRestorer (MultiTaskRestorer (Shared Encoder Multi-Task MoE))
 - **Input Resolution**: 256x256
 - **Use Case**: Shared Encoder Multi-Task model for Denoise, Deblur, Derain, Dehaze, and Low-Light
-- **Training Data**: LemGendizedNafNetDebluringLarge, LemGendizedFfaNetIndoorLarge, LemGendizedMirNetLowLightLarge, LemGendizedNafNetDenoisingLarge
+- **Training Data**: LemGendizedProfessionalMultitaskRestorationLarge
 
 ## Manifold Topology
 
@@ -77,10 +77,7 @@ restored_img.save("restored.png")
 
 ## Data Manifest
 
-- **LemGendizedNafNetDebluringLarge**: ~N/A binary image samples.
-- **LemGendizedFfaNetIndoorLarge**: ~N/A binary image samples.
-- **LemGendizedMirNetLowLightLarge**: ~N/A binary image samples.
-- **LemGendizedNafNetDenoisingLarge**: ~N/A binary image samples.
+- **LemGendizedProfessionalMultitaskRestorationLarge**: ~N/A binary image samples.
 
 ## Evaluation Results
 

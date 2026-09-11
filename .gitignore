@@ -28,3 +28,13 @@ __pycache__/
 .kaggle_token
 *.key
 kaggle.json
+
+# 5. Local Tooling, Linters & IDEs
+pyrightconfig.json
+.markdownlint.json
+typings/
+.vscode/
+.idea/
+.gemini/
+.antigravity/
+scratch/

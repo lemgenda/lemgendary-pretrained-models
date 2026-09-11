@@ -6,7 +6,7 @@
 
 The **LemGendary NAFNet Debluring** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: NAFNet (Standard Backbone)
+- **Architecture**: NAFNet (NAFNet (Nonlinear Activation-Free Network))
 - **Input Resolution**: 256x256
 - **Use Case**: NAFNet image debluring
 - **Training Data**: LemGendizedNafNetDebluringLarge

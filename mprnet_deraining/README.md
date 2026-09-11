@@ -6,7 +6,7 @@
 
 The **LemGendary MPRNet Deraining** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: MPRNet (Standard Backbone)
+- **Architecture**: MPRNet (MPRNet (Multi-Stage Progressive Network))
 - **Input Resolution**: 256x256
 - **Use Case**: MPRNet image deraining
 - **Training Data**: LemGendizedMprNetDerainingLarge

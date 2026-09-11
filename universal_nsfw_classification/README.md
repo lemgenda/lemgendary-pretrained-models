@@ -6,7 +6,7 @@
 
 The **LemGendary Universal NSFW Classifier** is a professional-grade AI model optimized for the `classification` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: UniversalClassifier (MobileNetV2 (Categorical Anchor))
+- **Architecture**: UniversalClassifier (EfficientNetV2-S (Multi-Class Categorical Head))
 - **Input Resolution**: 224x224
 - **Use Case**: Universal safety filter and NSFW classifier for realistic and anime content.
 - **Training Data**: LemGendizedClassificationMasterManifoldLarge

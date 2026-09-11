@@ -1,12 +1,12 @@
-# LemGendary RetinaFace MobileNet Detection
+# LemGendary RetinaFace Detection
 
 ![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-0-orange) ![Resolution](https://img.shields.io/badge/Res-640x640-blueviolet)
 
 ## Overview
 
-The **LemGendary RetinaFace MobileNet Detection** is a professional-grade AI model optimized for the `face_detection` lifecycle within the LemGendary Training Suite.
+The **LemGendary RetinaFace Detection** is a professional-grade AI model optimized for the `face_detection` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: RetinaFace (Standard Backbone)
+- **Architecture**: RetinaFace (RetinaFace (MobileNetV1-0.25 FPN Backbone))
 - **Input Resolution**: 640x640
 - **Use Case**: MobileNet-based face detection
 - **Training Data**: LemGendizedRetinaFaceMobileNetLarge
@@ -31,7 +31,7 @@ graph TD
 ```
 
 > [!TIP]
-> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[retinaface_mobilenet_usage.ipynb](retinaface_mobilenet_usage.ipynb)** notebook in this directory.
+> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[retinaface_usage.ipynb](retinaface_usage.ipynb)** notebook in this directory.
 
 - **Input Requirements**: RGB Image Tensors normalized to ImageNet stats.
 - **Failures**: Large aspect ratio distortions during standard resize phases.
