@@ -30,8 +30,6 @@ __pycache__/
 kaggle.json
 
 # 5. Local Tooling, Linters & IDEs
-pyrightconfig.json
-.markdownlint.json
 typings/
 .vscode/
 .idea/
