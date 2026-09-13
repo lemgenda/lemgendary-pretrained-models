@@ -1,15 +1,35 @@
-#!/bin/bash
-# Pre-commit hook for LemGendaryModels
-# Enforces Python compilation, markdownlint, model checkpoint integrity, and zero volatile residue.
+#!/bin/sh
+# LemGendary Ecosystem Pre-Commit Hook
+# Standardized hook enforcing full validation via lemgendary-env-manager
 
-echo "Running LemGendaryModels pre-commit verification..."
+ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+PROJECT_NAME="$(basename "$ROOT_DIR")"
+WORKSPACE_ROOT="$(cd "$ROOT_DIR/.." && pwd)"
 
-if ! python verify_models.py --staged; then
-    echo "====================================================="
-    echo "COMMIT BLOCKED: Verification failed."
-    echo "====================================================="
+echo "[PRE-COMMIT] Running LemGendary Ecosystem Validation for $PROJECT_NAME..."
+
+LEM_ENV_EXE="$WORKSPACE_ROOT/lemgendary-env-manager/.venv/Scripts/lem-env.exe"
+LEM_ENV_PY="$WORKSPACE_ROOT/lemgendary-env-manager/.venv/Scripts/python.exe"
+
+if [ -f "$LEM_ENV_EXE" ]; then
+    "$LEM_ENV_EXE" validate --project "$PROJECT_NAME"
+    EXIT_CODE=$?
+elif [ -f "$LEM_ENV_PY" ]; then
+    export PYTHONPATH="$WORKSPACE_ROOT/lemgendary-env-manager:$PYTHONPATH"
+    "$LEM_ENV_PY" -m env_manager.cli validate --project "$PROJECT_NAME"
+    EXIT_CODE=$?
+else
+    echo "[ERROR] lem-env not found at $WORKSPACE_ROOT/lemgendary-env-manager. Cannot validate."
     exit 1
 fi
 
-echo "[SUCCESS] All checks passed! Proceeding with commit."
+if [ $EXIT_CODE -ne 0 ]; then
+    echo "====================================================="
+    echo "COMMIT BLOCKED: Validation failed for $PROJECT_NAME."
+    echo "Run 'lem-env validate --project $PROJECT_NAME' to inspect."
+    echo "====================================================="
+    exit $EXIT_CODE
+fi
+
+echo "[PRE-COMMIT] Validation passed for $PROJECT_NAME."
 exit 0
