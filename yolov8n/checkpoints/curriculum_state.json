@@ -1,6 +1,6 @@
 {
   "model_key": "yolov8n",
-  "global_epoch": 9,
+  "global_epoch": 11,
   "resolution": 320,
   "best_metrics": {
     "map50": 0.4421,

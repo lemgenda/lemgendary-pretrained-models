@@ -1,6 +1,6 @@
 # LemGendary AI Training Matrix
 
-Auto-generated live dashboard | Last Updated: 2026-10-03 10:52:26
+Auto-generated live dashboard | Last Updated: 2026-10-03 11:13:27
 
 ## Completed (SOTA Targets Achieved)
 
@@ -23,7 +23,7 @@ Models actively scaling the resolution ladder and optimizing weights across data
 | LemGendary NIMA Aesthetic Scorer (Mobile) | **89.8%** | 183 | 100% | 224px |
 | LemGendary CodeFormer Face Restoration | **74.1%** | 4 | 100% | 512px |
 | LemGendary NIMA Aesthetic Scorer (EfficientNetV2-S) | **66.5%** | 49 | 75% | 224px |
-| LemGendary YOLOv8n Multi-Task Model | **36.0%** | 8 | 30% | 320px |
+| LemGendary YOLOv8n Multi-Task Model | **36.8%** | 10 | 30% | 320px |
 
 ## Not Started
 

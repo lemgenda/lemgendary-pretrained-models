@@ -1,6 +1,6 @@
 # LemGendary YOLOv8n Multi-Task Model
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-9-orange) ![Resolution](https://img.shields.io/badge/Res-320x320-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-11-orange) ![Resolution](https://img.shields.io/badge/Res-320x320-blueviolet)
 
 ## Overview
 
@@ -31,7 +31,12 @@ graph TD
 ```
 
 > [!TIP]
-> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[yolov8n_usage.ipynb](yolov8n_usage.ipynb)** notebook in this directory.
+> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[yolov8n-usage.ipynb](yolov8n-usage.ipynb)** notebook in this directory.
+>
+> **Artifacts & Checkpoints Structure**:
+>
+> - Production SOTA exports: `yolov8n.onnx` and `yolov8n.pt` are deployed to this directory whenever SOTA targets are achieved.
+> - Training checkpoints & curriculum state: Preserved strictly in [`checkpoints/`](checkpoints/) (`best.pt`, `best.pth`, `last.pt`, `progress.pth`, `curriculum_state.json`).
 
 - **Input Requirements**: RGB Image Tensors normalized to ImageNet stats.
 - **Failures**: Small bounding box occlusion and extreme aspect ratio distortions.
@@ -40,7 +45,7 @@ graph TD
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 9 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 11 total epochs securely.
 
 ## Model Stats
 
@@ -54,7 +59,7 @@ graph TD
 
 ## Evaluation Results
 
-- **Target Detection SOTA**: **mAP50**: 0.3122 | **mAP50-95**: 0.2064 | **Box Loss**: 1.20- | **Cls Loss**: 0.50-
+- **Target Detection SOTA**: **mAP50**: 0.3366 | **mAP50-95**: 0.2295 | **Box Loss**: 1.20- | **Cls Loss**: 0.50-
 - **Validation Protocol**: 80/20 train/validate with zero ground-truth label leakage.
 
 ## Scientific Research & Reference Paper
