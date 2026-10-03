@@ -9,7 +9,7 @@ The **LemGendary Professional Multi-Task Restoration Model** is a professional-g
 - **Architecture**: MultiTaskRestorer (MultiTaskRestorer (Shared Encoder Multi-Task MoE))
 - **Input Resolution**: 256x256
 - **Use Case**: Shared Encoder Multi-Task model for Denoise, Deblur, Derain, Dehaze, and Low-Light
-- **Training Data**: LemGendizedProfessionalMultitaskRestorationLarge
+- **Training Data**: LemGendizedMultitaskRestorationPro, LemGendizedMultitaskRestorationPro
 
 ## Manifold Topology
 
@@ -77,12 +77,30 @@ restored_img.save("restored.png")
 
 ## Data Manifest
 
-- **LemGendizedProfessionalMultitaskRestorationLarge**: ~N/A binary image samples.
+- **LemGendizedMultitaskRestorationPro**: ~N/A binary image samples.
+- **LemGendizedMultitaskRestorationPro**: ~N/A binary image samples.
 
 ## Evaluation Results
 
 - **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 2.5-
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: All-in-One Image Restoration for Unknown Corruptions
+- **Authors**: Boyun Li, Xiao Liu, Peng Hu, Zitao Zhou, Shuangqing Zhao, Xi Peng
+- **Publication**: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2020)
+- **Canonical Source / Link**: [https://arxiv.org/abs/2004.11700](https://arxiv.org/abs/2004.11700)
+
+```bibtex
+@inproceedings{li2020all,
+  title={All-in-one image restoration for unknown corruptions},
+  author={Li, Boyun and Liu, Xiao and Hu, Peng and Zhou, Zitao and Zhao, Shuangqing and Peng, Xi},
+  booktitle={CVPR},
+  pages={2190--2199},
+  year={2020}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

@@ -1,21 +1,21 @@
 # LemGendary NIMA Aesthetic Scorer (Pro ViT)
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-53-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-54-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
 The **LemGendary NIMA Aesthetic Scorer (Pro ViT)** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: NIMA_Model (Swin-v2-T (Global Multi-Scale Attention))
-- **Input Resolution**: 256x256
+- **Input Resolution**: 512x512
 - **Use Case**: High-end aesthetic quality scorer using Swin Transformer V2, optimized for high-res global composition.
-- **Training Data**: LemGendizedNimaAestheticLarge
+- **Training Data**: LemGendizedNimaAesthetic, LemGendizedNimaAesthetic
 
 ## Manifold Topology
 
 ```mermaid
 graph TD
-    Input[RGB Input 256x256] --> Backbone[NIMA_Model]
+    Input[RGB Input 512x512] --> Backbone[NIMA_Model]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Quality Head]
     Head --> Output[Predictive Array]
@@ -73,7 +73,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 53 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 54 total epochs securely.
 
 ## Model Stats
 
@@ -83,12 +83,30 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Data Manifest
 
-- **LemGendizedNimaAestheticLarge**: ~N/A binary image samples.
+- **LemGendizedNimaAesthetic**: ~N/A binary image samples.
+- **LemGendizedNimaAesthetic**: ~N/A binary image samples.
 
 ## Evaluation Results
 
 - **Baseline Achievement**: **PLCC**: 0.90+ | **SRCC**: 0.83+
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: Swin Transformer V2: Using Larger Models and Images
+- **Authors**: Ze Liu, Han Hu, Yutong Lin, Zhuliang Yao, Zhenda Xie, Yixuan Wei, Jia Ning, Yue Cao, Zheng Zhang, Li Dong, Furu Wei, Baining Guo
+- **Publication**: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2022)
+- **Canonical Source / Link**: [https://arxiv.org/abs/2111.09883](https://arxiv.org/abs/2111.09883)
+
+```bibtex
+@inproceedings{liu2022swin,
+  title={Swin transformer v2: Using larger models and images},
+  author={Liu, Ze and Hu, Han and Lin, Yutong and Yao, Zhuliang and Xie, Zhenda and Wei, Yixuan and Ning, Jia and Cao, Yue and Zhang, Zheng and Dong, Li and others},
+  booktitle={CVPR},
+  pages={12009--12019},
+  year={2022}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

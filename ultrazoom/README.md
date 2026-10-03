@@ -1,6 +1,6 @@
 # LemGendary UltraZoom Master Model
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-1-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-2-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
 
 ## Overview
 
@@ -9,7 +9,7 @@ The **LemGendary UltraZoom Master Model** is a professional-grade AI model optim
 - **Architecture**: UltraZoomMaster (UltraZoomMaster (Sub-Pixel ESPCN Super-Resolution))
 - **Input Resolution**: 256x256
 - **Use Case**: Dynamic scale super-resolution model
-- **Training Data**: LemGendizedUltraZoomLarge
+- **Training Data**: LemGendizedUltraZoom, LemGendizedUltraZoom
 
 ## Manifold Topology
 
@@ -67,7 +67,7 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 1 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 2 total epochs securely.
 
 ## Model Stats
 
@@ -77,12 +77,30 @@ restored_img.save("restored.png")
 
 ## Data Manifest
 
-- **LemGendizedUltraZoomLarge**: ~N/A binary image samples.
+- **LemGendizedUltraZoom**: ~N/A binary image samples.
+- **LemGendizedUltraZoom**: ~N/A binary image samples.
 
 ## Evaluation Results
 
 - **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 2.5-
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network
+- **Authors**: Wenzhe Shi, Jose Caballero, Ferenc Huszár, Johannes Totz, Andrew P. Aitken, Rob Bishop, Daniel Rueckert, Zehan Wang
+- **Publication**: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2016)
+- **Canonical Source / Link**: [https://arxiv.org/abs/1609.05158](https://arxiv.org/abs/1609.05158)
+
+```bibtex
+@inproceedings{shi2016real,
+  title={Real-time single image and video super-resolution using an efficient sub-pixel convolutional neural network},
+  author={Shi, Wenzhe and Caballero, Jose and Husz{\'a}r, Ferenc and Totz, Johannes and Aitken, Andrew P and Bishop, Rob and Rueckert, Daniel and Wang, Zehan},
+  booktitle={CVPR},
+  pages={1874--1883},
+  year={2016}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

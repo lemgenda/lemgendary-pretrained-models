@@ -1,21 +1,21 @@
 # LemGendary NAFNet Denoising
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-24-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-25-orange) ![Resolution](https://img.shields.io/badge/Res-640x640-blueviolet)
 
 ## Overview
 
 The **LemGendary NAFNet Denoising** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: NAFNet (NAFNet (Nonlinear Activation-Free Network))
-- **Input Resolution**: 256x256
+- **Input Resolution**: 640x640
 - **Use Case**: NAFNet image denoising
-- **Training Data**: LemGendizedNafNetDenoisingLarge
+- **Training Data**: LemGendizedNafNetDenoising, LemGendizedNafNetDenoising
 
 ## Manifold Topology
 
 ```mermaid
 graph TD
-    Input[RGB Input 256x256] --> Backbone[NAFNet]
+    Input[RGB Input 640x640] --> Backbone[NAFNet]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Restoration Head]
     Head --> Output[Predictive Array]
@@ -67,7 +67,7 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 24 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 25 total epochs securely.
 
 ## Model Stats
 
@@ -77,12 +77,30 @@ restored_img.save("restored.png")
 
 ## Data Manifest
 
-- **LemGendizedNafNetDenoisingLarge**: ~N/A binary image samples.
+- **LemGendizedNafNetDenoising**: ~N/A binary image samples.
+- **LemGendizedNafNetDenoising**: ~N/A binary image samples.
 
 ## Evaluation Results
 
 - **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 2.5-
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: Simple Baselines for Image Restoration
+- **Authors**: Liangyu Chen, Xiaojie Chu, Xiangyu Zhang, Jian Sun
+- **Publication**: European Conference on Computer Vision (ECCV) (2022)
+- **Canonical Source / Link**: [https://arxiv.org/abs/2204.04676](https://arxiv.org/abs/2204.04676)
+
+```bibtex
+@inproceedings{chen2022simple,
+  title={Simple baselines for image restoration},
+  author={Chen, Liangyu and Chu, Xiaojie and Zhang, Xiangyu and Sun, Jian},
+  booktitle={ECCV},
+  pages={17--33},
+  year={2022}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

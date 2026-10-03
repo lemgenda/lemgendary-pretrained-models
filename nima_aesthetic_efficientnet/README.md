@@ -1,6 +1,6 @@
 # LemGendary NIMA Aesthetic Scorer (EfficientNetV2-S)
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-49-orange) ![Resolution](https://img.shields.io/badge/Res-224x224-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-50-orange) ![Resolution](https://img.shields.io/badge/Res-224x224-blueviolet)
 
 ## Overview
 
@@ -9,7 +9,7 @@ The **LemGendary NIMA Aesthetic Scorer (EfficientNetV2-S)** is a professional-gr
 - **Architecture**: NIMA_Model (EfficientNetV2-S (Global Composition))
 - **Input Resolution**: 224x224
 - **Use Case**: Aesthetic quality scorer trained on custom standardized LemGendizedQualityDataset, optimized for artistic composition and color harmony using EfficientNetV2-S backbone.
-- **Training Data**: LemGendizedNimaAestheticLarge
+- **Training Data**: LemGendizedNimaAesthetic, LemGendizedNimaAesthetic
 
 ## Manifold Topology
 
@@ -73,7 +73,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 49 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 50 total epochs securely.
 
 ## Model Stats
 
@@ -83,12 +83,32 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Data Manifest
 
-- **LemGendizedNimaAestheticLarge**: ~N/A binary image samples.
+- **LemGendizedNimaAesthetic**: ~N/A binary image samples.
+- **LemGendizedNimaAesthetic**: ~N/A binary image samples.
 
 ## Evaluation Results
 
 - **Baseline Achievement**: **PLCC**: 0.90+ | **SRCC**: 0.83+
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: NIMA: Neural Image Assessment
+- **Authors**: Hossein Talebi, Peyman Milanfar
+- **Publication**: IEEE Transactions on Image Processing (TIP) (2018)
+- **Canonical Source / Link**: [https://arxiv.org/abs/1709.05424](https://arxiv.org/abs/1709.05424)
+
+```bibtex
+@article{talebi2018nima,
+  title={NIMA: Neural image assessment},
+  author={Talebi, Hossein and Milanfar, Peyman},
+  journal={IEEE TIP},
+  volume={27},
+  number={8},
+  pages={3998--4011},
+  year={2018}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

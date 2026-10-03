@@ -1,21 +1,21 @@
 # LemGendary MPRNet Deraining
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-22-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-23-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
 The **LemGendary MPRNet Deraining** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: MPRNet (MPRNet (Multi-Stage Progressive Network))
-- **Input Resolution**: 256x256
+- **Input Resolution**: 512x512
 - **Use Case**: MPRNet image deraining
-- **Training Data**: LemGendizedMprNetDerainingLarge
+- **Training Data**: LemGendizedMprNetDeraining, LemGendizedMprNetDeraining
 
 ## Manifold Topology
 
 ```mermaid
 graph TD
-    Input[RGB Input 256x256] --> Backbone[MPRNet]
+    Input[RGB Input 512x512] --> Backbone[MPRNet]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Restoration Head]
     Head --> Output[Predictive Array]
@@ -67,7 +67,7 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 22 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 23 total epochs securely.
 
 ## Model Stats
 
@@ -77,12 +77,30 @@ restored_img.save("restored.png")
 
 ## Data Manifest
 
-- **LemGendizedMprNetDerainingLarge**: ~N/A binary image samples.
+- **LemGendizedMprNetDeraining**: ~N/A binary image samples.
+- **LemGendizedMprNetDeraining**: ~N/A binary image samples.
 
 ## Evaluation Results
 
 - **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 2.5-
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: Multi-Stage Progressive Image Restoration
+- **Authors**: Syed Waqas Zamir, Aditya Arora, Salman Khan, Munawar Hayat, Fahad Shahbaz Khan, Ming-Hsuan Yang, Ling Shao
+- **Publication**: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2021)
+- **Canonical Source / Link**: [https://arxiv.org/abs/2102.02808](https://arxiv.org/abs/2102.02808)
+
+```bibtex
+@inproceedings{zamir2021multi,
+  title={Multi-stage progressive image restoration},
+  author={Zamir, Syed Waqas and Arora, Aditya and Khan, Salman and Hayat, Munawar and Khan, Fahad Shahbaz and Yang, Ming-Hsuan and Shao, Ling},
+  booktitle={CVPR},
+  pages={14821--14831},
+  year={2021}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

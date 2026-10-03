@@ -1,6 +1,6 @@
 # LemGendary FFANet Dehazing (Outdoor)
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-1-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-2-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
 
 ## Overview
 
@@ -9,7 +9,7 @@ The **LemGendary FFANet Dehazing (Outdoor)** is a professional-grade AI model op
 - **Architecture**: BranchedFFANet (BranchedFFANet (Feature Fusion Attention))
 - **Input Resolution**: 256x256
 - **Use Case**: FFANet outdoor dehazing restoration
-- **Training Data**: LemGendizedFfaNetOutdoorLarge
+- **Training Data**: LemGendizedFfaNetOutdoor, LemGendizedFfaNetOutdoor
 
 ## Manifold Topology
 
@@ -67,7 +67,7 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 1 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 2 total epochs securely.
 
 ## Model Stats
 
@@ -77,12 +77,31 @@ restored_img.save("restored.png")
 
 ## Data Manifest
 
-- **LemGendizedFfaNetOutdoorLarge**: ~N/A binary image samples.
+- **LemGendizedFfaNetOutdoor**: ~N/A binary image samples.
+- **LemGendizedFfaNetOutdoor**: ~N/A binary image samples.
 
 ## Evaluation Results
 
 - **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 2.5-
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: FFA-Net: Feature Fusion Attention Network for Single Image Dehazing
+- **Authors**: Xu Qin, Zhilin Wang, Yuanchao Bai, Xiaodong Xie, Huizhu Jia
+- **Publication**: AAAI Conference on Artificial Intelligence (AAAI) (2020)
+- **Canonical Source / Link**: [https://arxiv.org/abs/1911.07559](https://arxiv.org/abs/1911.07559)
+
+```bibtex
+@inproceedings{qin2020ffa,
+  title={FFA-Net: Feature fusion attention network for single image dehazing},
+  author={Qin, Xu and Wang, Zhilin and Bai, Yuanchao and Xie, Xiaodong and Jia, Huizhu},
+  booktitle={AAAI},
+  volume={34},
+  pages={11908--11915},
+  year={2020}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

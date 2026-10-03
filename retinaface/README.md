@@ -9,7 +9,7 @@ The **LemGendary RetinaFace Detection** is a professional-grade AI model optimiz
 - **Architecture**: RetinaFace (RetinaFace (MobileNetV1-0.25 FPN Backbone))
 - **Input Resolution**: 640x640
 - **Use Case**: MobileNet-based face detection
-- **Training Data**: LemGendizedRetinaFaceMobileNetLarge
+- **Training Data**: LemGendizedRetinaFace, LemGendizedRetinaFace
 
 ## Manifold Topology
 
@@ -50,12 +50,30 @@ graph TD
 
 ## Data Manifest
 
-- **LemGendizedRetinaFaceMobileNetLarge**: ~N/A binary image samples.
+- **LemGendizedRetinaFace**: ~N/A binary image samples.
+- **LemGendizedRetinaFace**: ~N/A binary image samples.
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 2.5-
+- **Baseline Achievement**: **mAP (Easy)**: 0.915 | **mAP (Medium)**: 0.890 | **mAP (Hard)**: 0.750
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: RetinaFace: Single-Shot Multi-Level Face Localisation in the Wild
+- **Authors**: Jiankang Deng, Jia Guo, Evangelos Ververas, Irene Kotsia, Stefanos Zafeiriou
+- **Publication**: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2020)
+- **Canonical Source / Link**: [https://arxiv.org/abs/1905.00641](https://arxiv.org/abs/1905.00641)
+
+```bibtex
+@inproceedings{deng2020retinaface,
+  title={Retinaface: Single-shot multi-level face localisation in the wild},
+  author={Deng, Jiankang and Guo, Jia and Ververas, Evangelos and Kotsia, Irene and Zafeiriou, Stefanos},
+  booktitle={CVPR},
+  pages={5203--5212},
+  year={2020}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

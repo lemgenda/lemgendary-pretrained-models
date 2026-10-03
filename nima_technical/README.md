@@ -1,21 +1,21 @@
 # LemGendary NIMA Technical Scorer
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-465-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-466-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
 The **LemGendary NIMA Technical Scorer** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: NIMA_Model (EfficientNetV2-S (Spatial Integrity))
-- **Input Resolution**: 256x256
+- **Input Resolution**: 512x512
 - **Use Case**: Technical quality scorer trained on custom standardized LemGendizedQualityDataset, optimized for detecting micro-defects, noise, and artifacts.
-- **Training Data**: LemGendizedNimaTechnicalLarge
+- **Training Data**: LemGendizedNimaTechnical, LemGendizedNimaTechnical
 
 ## Manifold Topology
 
 ```mermaid
 graph TD
-    Input[RGB Input 256x256] --> Backbone[NIMA_Model]
+    Input[RGB Input 512x512] --> Backbone[NIMA_Model]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Quality Head]
     Head --> Output[Predictive Array]
@@ -73,7 +73,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 465 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 466 total epochs securely.
 
 ## Model Stats
 
@@ -83,12 +83,32 @@ print(f"Quality Score: {mean_score:.2f}")
 
 ## Data Manifest
 
-- **LemGendizedNimaTechnicalLarge**: ~N/A binary image samples.
+- **LemGendizedNimaTechnical**: ~N/A binary image samples.
+- **LemGendizedNimaTechnical**: ~N/A binary image samples.
 
 ## Evaluation Results
 
 - **Baseline Achievement**: **PLCC**: 0.90+ | **SRCC**: 0.83+
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: NIMA: Neural Image Assessment
+- **Authors**: Hossein Talebi, Peyman Milanfar
+- **Publication**: IEEE Transactions on Image Processing (TIP) (2018)
+- **Canonical Source / Link**: [https://arxiv.org/abs/1709.05424](https://arxiv.org/abs/1709.05424)
+
+```bibtex
+@article{talebi2018nima,
+  title={NIMA: Neural image assessment},
+  author={Talebi, Hossein and Milanfar, Peyman},
+  journal={IEEE TIP},
+  volume={27},
+  number={8},
+  pages={3998--4011},
+  year={2018}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

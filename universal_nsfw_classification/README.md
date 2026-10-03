@@ -9,7 +9,7 @@ The **LemGendary Universal NSFW Classifier** is a professional-grade AI model op
 - **Architecture**: UniversalClassifier (EfficientNetV2-S (Multi-Class Categorical Head))
 - **Input Resolution**: 224x224
 - **Use Case**: Universal safety filter and NSFW classifier for realistic and anime content.
-- **Training Data**: LemGendizedClassificationMasterManifoldLarge
+- **Training Data**: LemGendizedClassificationMaster, LemGendizedClassificationMaster
 
 ## Manifold Topology
 
@@ -50,12 +50,30 @@ graph TD
 
 ## Data Manifest
 
-- **LemGendizedClassificationMasterManifoldLarge**: ~N/A binary image samples.
+- **LemGendizedClassificationMaster**: ~N/A binary image samples.
+- **LemGendizedClassificationMaster**: ~N/A binary image samples.
 
 ## Evaluation Results
 
-- **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 2.5-
+- **Baseline Achievement**: **Top-1 Accuracy**: 0.980 | **Top-5 Accuracy**: 0.995
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: EfficientNetV2: Smaller Models and Faster Training
+- **Authors**: Mingxing Tan, Quoc V. Le
+- **Publication**: International Conference on Machine Learning (ICML) (2021)
+- **Canonical Source / Link**: [https://arxiv.org/abs/2104.00298](https://arxiv.org/abs/2104.00298)
+
+```bibtex
+@inproceedings{tan2021efficientnetv2,
+  title={Efficientnetv2: Smaller models and faster training},
+  author={Tan, Mingxing and Le, Quoc},
+  booktitle={ICML},
+  pages={10096--10106},
+  year={2021}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

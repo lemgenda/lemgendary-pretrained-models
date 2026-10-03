@@ -1,21 +1,21 @@
 # LemGendary MIRNet v2 Exposure Correction
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-50-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-51-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
 The **LemGendary MIRNet v2 Exposure Correction** is a professional-grade AI model optimized for the `restoration` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: MIRNet (MIRNet_v2 (Multi-Scale Residual Network))
-- **Input Resolution**: 256x256
+- **Input Resolution**: 512x512
 - **Use Case**: MIRNet v2 for overexposure correction and dynamic range adjustment
-- **Training Data**: LemGendizedMirNetExposureLarge
+- **Training Data**: LemGendizedMirNetExposure, LemGendizedMirNetExposure
 
 ## Manifold Topology
 
 ```mermaid
 graph TD
-    Input[RGB Input 256x256] --> Backbone[MIRNet]
+    Input[RGB Input 512x512] --> Backbone[MIRNet]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Restoration Head]
     Head --> Output[Predictive Array]
@@ -67,7 +67,7 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 50 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 51 total epochs securely.
 
 ## Model Stats
 
@@ -77,12 +77,29 @@ restored_img.save("restored.png")
 
 ## Data Manifest
 
-- **LemGendizedMirNetExposureLarge**: ~N/A binary image samples.
+- **LemGendizedMirNetExposure**: ~N/A binary image samples.
+- **LemGendizedMirNetExposure**: ~N/A binary image samples.
 
 ## Evaluation Results
 
 - **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 2.5-
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: Learning Enriched Features for Fast Image Restoration and Enhancement
+- **Authors**: Syed Waqas Zamir, Aditya Arora, Salman Khan, Munawar Hayat, Fahad Shahbaz Khan, Ming-Hsuan Yang, Ling Shao
+- **Publication**: IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) (2022)
+- **Canonical Source / Link**: [https://arxiv.org/abs/2003.06792](https://arxiv.org/abs/2003.06792)
+
+```bibtex
+@article{zamir2022learning,
+  title={Learning enriched features for fast image restoration and enhancement},
+  author={Zamir, Syed Waqas and Arora, Aditya and Khan, Salman and Hayat, Munawar and Khan, Fahad Shahbaz and Yang, Ming-Hsuan and Shao, Ling},
+  journal={IEEE TPAMI},
+  year={2022}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

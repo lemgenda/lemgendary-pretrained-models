@@ -10,7 +10,7 @@ The **LemGendary Forex Predictor (Multi-Scale CNN-Transformer)** is a profession
 - **Input Resolution**: 168x14 (Lookback Sequence)
 - **Use Case**: Multi-pair, multi-timeframe Forex trading model trained on MetaTrader 5 OHLCV data. Predicts trade direction (Up/Down/Sideways) and magnitude (TP/SL pips) for all major currency pairs. Architecture uses causal Conv1D stacks per timeframe fused via cross-timeframe attention. Fully stateless and ONNX-compatible for live MT5 EA deployment.
 
-- **Training Data**: LemGendizedForexUniverseLarge
+- **Training Data**: LemGendizedForexUniverse, LemGendizedForexUniverse
 
 ## Manifold Topology
 
@@ -81,12 +81,29 @@ with torch.no_grad():
 
 ## Data Manifest
 
-- **LemGendizedForexUniverseLarge**: ~30811k time-series OHLCV sequences (2019-2026).
+- **LemGendizedForexUniverse**: ~30811k time-series OHLCV sequences (2019-2026).
+- **LemGendizedForexUniverse**: ~30811k time-series OHLCV sequences (2019-2026).
 
 ## Evaluation Results
 
 - **SOTA Metrics**: **Dir Acc**: 58.5% | **Win Rate**: 56.0% | **PF**: 1.65 | **Sharpe**: 1.85 | **MaxDD**: 12.0%
 - **Validation Protocol**: 6-Fold Anchored Walk-Forward Cross-Validation (14-day Embargo).
+
+## Scientific Research & Reference Paper
+
+- **Title**: An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling
+- **Authors**: Shaojie Bai, J. Zico Kolter, Vladlen Koltun
+- **Publication**: arXiv preprint (2018)
+- **Canonical Source / Link**: [https://arxiv.org/abs/1803.01271](https://arxiv.org/abs/1803.01271)
+
+```bibtex
+@article{bai2018empirical,
+  title={An empirical evaluation of generic convolutional and recurrent networks for sequence modeling},
+  author={Bai, Shaojie and Kolter, J Zico and Koltun, Vladlen},
+  journal={arXiv preprint arXiv:1803.01271},
+  year={2018}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

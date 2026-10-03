@@ -1,6 +1,6 @@
 # LemGendary Universal Film Restorer
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-1-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-2-orange) ![Resolution](https://img.shields.io/badge/Res-256x256-blueviolet)
 
 ## Overview
 
@@ -9,7 +9,7 @@ The **LemGendary Universal Film Restorer** is a professional-grade AI model opti
 - **Architecture**: UniversalFilmRestorer (UniversalFilmRestorer (Residual Dense Autoencoder))
 - **Input Resolution**: 256x256
 - **Use Case**: Universal image restoration autoencoder
-- **Training Data**: LemGendizedFilmRestorerLarge
+- **Training Data**: LemGendizedFilmRestorer, LemGendizedFilmRestorer
 
 ## Manifold Topology
 
@@ -67,7 +67,7 @@ restored_img.save("restored.png")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 1 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 2 total epochs securely.
 
 ## Model Stats
 
@@ -77,12 +77,32 @@ restored_img.save("restored.png")
 
 ## Data Manifest
 
-- **LemGendizedFilmRestorerLarge**: ~N/A binary image samples.
+- **LemGendizedFilmRestorer**: ~N/A binary image samples.
+- **LemGendizedFilmRestorer**: ~N/A binary image samples.
 
 ## Evaluation Results
 
 - **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 2.5-
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: Residual Dense Network for Image Restoration
+- **Authors**: Yulun Zhang, Yapeng Tian, Yu Kong, Bineng Zhong, Yun Fu
+- **Publication**: IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) (2020)
+- **Canonical Source / Link**: [https://arxiv.org/abs/1802.08797](https://arxiv.org/abs/1802.08797)
+
+```bibtex
+@article{zhang2020residual,
+  title={Residual dense network for image restoration},
+  author={Zhang, Yulun and Tian, Yapeng and Kong, Yu and Zhong, Bineng and Fu, Yun},
+  journal={IEEE TPAMI},
+  volume={43},
+  number={7},
+  pages={2482--2495},
+  year={2020}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*

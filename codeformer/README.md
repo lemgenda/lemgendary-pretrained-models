@@ -1,6 +1,6 @@
 # LemGendary CodeFormer Face Restoration
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-4-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-5-orange) ![Resolution](https://img.shields.io/badge/Res-512x512-blueviolet)
 
 ## Overview
 
@@ -9,7 +9,7 @@ The **LemGendary CodeFormer Face Restoration** is a professional-grade AI model 
 - **Architecture**: CodeFormer (CodeFormer (Transformer-Based Face Restoration))
 - **Input Resolution**: 512x512
 - **Use Case**: Face restoration model
-- **Training Data**: LemGendizedCodeFormerLarge
+- **Training Data**: LemGendizedCodeFormer, LemGendizedCodeFormer
 
 ## Manifold Topology
 
@@ -40,7 +40,7 @@ graph TD
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 4 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 5 total epochs securely.
 
 ## Model Stats
 
@@ -50,12 +50,29 @@ graph TD
 
 ## Data Manifest
 
-- **LemGendizedCodeFormerLarge**: ~N/A binary image samples.
+- **LemGendizedCodeFormer**: ~N/A binary image samples.
+- **LemGendizedCodeFormer**: ~N/A binary image samples.
 
 ## Evaluation Results
 
 - **Baseline Achievement**: **PSNR**: 32.5+ | **SSIM**: 0.94+ | **LPIPS**: 0.06- | **FID**: 2.5-
 - **Split**: 80/20 train/validate with zero sample-leakage.
+
+## Scientific Research & Reference Paper
+
+- **Title**: Towards Robust Blind Face Restoration with Codebook Lookup Transformer
+- **Authors**: Shangchen Zhou, Kelvin C.K. Chan, Chongyi Li, Chen Change Loy
+- **Publication**: Advances in Neural Information Processing Systems (NeurIPS) (2022)
+- **Canonical Source / Link**: [https://arxiv.org/abs/2206.11253](https://arxiv.org/abs/2206.11253)
+
+```bibtex
+@inproceedings{zhou2022codeformer,
+  title={Towards Robust Blind Face Restoration with Codebook Lookup Transformer},
+  author={Zhou, Shangchen and Chan, Kelvin CK and Li, Chongyi and Loy, Chen Change},
+  booktitle={NeurIPS},
+  year={2022}
+}
+```
 
 ---
 **LemGendary AI Training Suite** | *SOTA-Autonomous & Nuclear-Hardened Matrix*
