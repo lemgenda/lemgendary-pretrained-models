@@ -1,6 +1,6 @@
 {
   "model_key": "yolov8n",
-  "global_epoch": 16,
+  "global_epoch": 17,
   "resolution": 320,
   "fraction": 0.5,
   "stage_index": 2,
