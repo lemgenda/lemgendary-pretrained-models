@@ -1,12 +1,12 @@
 {
   "model_key": "yolov8n",
-  "global_epoch": 29,
-  "resolution": 320,
+  "global_epoch": 127,
+  "resolution": 480,
   "fraction": 0.5,
-  "stage_index": 2,
+  "stage_index": 6,
   "best_metrics": {
-    "map50": 0.47993,
-    "map50_95": 0.34737
+    "map50": 0.59708,
+    "map50_95": 0.46657
   },
   "sota_achieved": false
 }
