@@ -1,13 +1,13 @@
 # LemGendary YOLOv8n Multi-Task Model
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-22-orange) ![Resolution](https://img.shields.io/badge/Res-320x320-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-150-orange) ![Resolution](https://img.shields.io/badge/Res-480x480-blueviolet)
 
 ## Overview
 
 The **LemGendary YOLOv8n Multi-Task Model** is a professional-grade AI model optimized for the `detection` lifecycle within the LemGendary Training Suite.
 
 - **Architecture**: YOLO (YOLOv8n (CSPDarknet53 + PANet))
-- **Input Resolution**: 320x320
+- **Input Resolution**: 480x480
 - **Use Case**: Unified YOLOv8n for classification, detection, and pose
 - **Training Data**: LemGendizedYoloV8n
 
@@ -15,7 +15,7 @@ The **LemGendary YOLOv8n Multi-Task Model** is a professional-grade AI model opt
 
 ```mermaid
 graph TD
-    Input[RGB Input 320x320] --> Backbone[YOLO]
+    Input[RGB Input 480x480] --> Backbone[YOLO]
     Backbone --> Manifold[Latent Manifold]
     Manifold --> Head[Detection Head]
     Head --> Output[Predictive Array]
@@ -45,7 +45,7 @@ graph TD
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 22 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 150 total epochs securely.
 
 ## Model Stats
 
@@ -59,7 +59,7 @@ graph TD
 
 ## Evaluation Results
 
-- **Target Detection SOTA**: **mAP50**: 0.4451 | **mAP50-95**: 0.3159 | **Box Loss**: 20.1294 | **Cls Loss**: 2.9435
+- **Target Detection SOTA**: **mAP50**: 0.6121 | **mAP50-95**: 0.4810 | **Box Loss**: 7.2042 | **Cls Loss**: 2.4058
 - **Validation Protocol**: 80/20 train/validate with zero ground-truth label leakage.
 
 ## Scientific Research & Reference Paper
