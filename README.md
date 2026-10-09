@@ -1,12 +1,13 @@
 # LemGendary AI Training Matrix
 
-Auto-generated live dashboard | Last Updated: 2026-10-08 03:07:49
+Auto-generated live dashboard | Last Updated: 2026-10-09 07:56:24
 
 ## Completed (SOTA Targets Achieved)
 
 Models that have fully satisfied their strict target benchmarks and exported their architecture for production deployment.
 
 - LemGendary Authenticity Scorer (AI vs Human) ![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen)
+- LemGendary CodeFormer Face Restoration ![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen)
 - LemGendary MPRNet Deraining ![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen)
 - LemGendary NAFNet Debluring ![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen)
 - LemGendary NAFNet Denoising ![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen)
@@ -20,10 +21,8 @@ Models actively scaling the resolution ladder and optimizing weights across data
 | LemGendary NIMA Technical Scorer | **98.3%** | 465 | 100% | 512px |
 | LemGendary NIMA Aesthetic Scorer (Pro ViT) | **94.1%** | 53 | 100% | 512px |
 | LemGendary MIRNet v2 Exposure Correction | **91.7%** | 50 | 75% | 512px |
-| LemGendary NIMA Aesthetic Scorer (Mobile) | **89.8%** | 183 | 100% | 224px |
-| LemGendary CodeFormer Face Restoration | **74.1%** | 4 | 100% | 512px |
 | LemGendary NIMA Aesthetic Scorer (EfficientNetV2-S) | **66.5%** | 49 | 75% | 224px |
-| LemGendary YOLOv8n Multi-Task Model | **60.8%** | 149 | 65% | 480px |
+| LemGendary YOLOv8n Multi-Task Model | **64.2%** | 168 | 80% | 480px |
 
 ## Not Started
 
@@ -33,6 +32,7 @@ Registered matrix targets awaiting cluster allocation.
 - LemGendary FFANet Dehazing (Outdoor)
 - LemGendary Forex Predictor (Multi-Scale CNN-Transformer)
 - LemGendary MIRNet v2 Low-Light Enhancement
+- LemGendary NIMA Aesthetic Scorer (Mobile)
 - LemGendary ParseNet Face Parsing
 - LemGendary Professional Multi-Task Restoration Model
 - LemGendary RetinaFace Detection

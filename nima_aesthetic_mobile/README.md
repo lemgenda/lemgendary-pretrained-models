@@ -1,14 +1,14 @@
 # LemGendary NIMA Aesthetic Scorer (Mobile)
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-184-orange) ![Resolution](https://img.shields.io/badge/Res-224x224-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-0-orange) ![Resolution](https://img.shields.io/badge/Res-224x224-blueviolet)
 
 ## Overview
 
 The **LemGendary NIMA Aesthetic Scorer (Mobile)** is a professional-grade AI model optimized for the `quality` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: NIMA_Model (MobileNetV2 (Global Composition))
+- **Architecture**: NIMA_Model (MobileNetV3-Small (Global Composition))
 - **Input Resolution**: 224x224
-- **Use Case**: Aesthetic quality scorer trained on custom standardized LemGendizedQualityDataset, optimized for artistic composition and color harmony.
+- **Use Case**: Aesthetic quality scorer trained on custom standardized LemGendizedQualityDataset, optimized for artistic composition and color harmony with ultra-lightweight MobileNetV3-Small backbone for real-time mobile and edge inference.
 - **Training Data**: LemGendizedNimaAesthetic, LemGendizedNimaAesthetic
 
 ## Manifold Topology
@@ -73,7 +73,7 @@ print(f"Quality Score: {mean_score:.2f}")
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 184 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 0 total epochs securely.
 
 ## Model Stats
 

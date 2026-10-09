@@ -1,14 +1,14 @@
 # LemGendary UPN v2 Parameter Predictor
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-2-orange) ![Resolution](https://img.shields.io/badge/Res-128x128-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-0-orange) ![Resolution](https://img.shields.io/badge/Res-128x128-blueviolet)
 
 ## Overview
 
 The **LemGendary UPN v2 Parameter Predictor** is a professional-grade AI model optimized for the `parameter_prediction` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: UPN_v2 (UPN_v2 (MobileNet-Lite Parameter Regressor))
+- **Architecture**: UPN_v2 (MobileNetV3-Small Parameter Regressor)
 - **Input Resolution**: 128x128
-- **Use Case**: Universal parameter predictor for image restoration
+- **Use Case**: Universal parameter predictor for image restoration powered by MobileNetV3-Small backbone
 - **Training Data**: LemGendizedUpnV2, LemGendizedUpnV2
 
 ## Manifold Topology
@@ -40,7 +40,7 @@ graph TD
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 2 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 0 total epochs securely.
 
 ## Model Stats
 

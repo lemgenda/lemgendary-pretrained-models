@@ -6,9 +6,9 @@
 
 The **LemGendary RetinaFace Detection** is a professional-grade AI model optimized for the `face_detection` lifecycle within the LemGendary Training Suite.
 
-- **Architecture**: RetinaFace (RetinaFace (MobileNetV1-0.25 FPN Backbone))
+- **Architecture**: RetinaFace (MobileNetV3-Small Backbone)
 - **Input Resolution**: 640x640
-- **Use Case**: MobileNet-based face detection
+- **Use Case**: Robust single-stage face and landmark detection with unified MobileNetV3-Small backbone for real-time edge deployment.
 - **Training Data**: LemGendizedRetinaFace, LemGendizedRetinaFace
 
 ## Manifold Topology
