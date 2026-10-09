@@ -1,6 +1,6 @@
 # LemGendary YOLOv8n Multi-Task Model
 
-![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-150-orange) ![Resolution](https://img.shields.io/badge/Res-480x480-blueviolet)
+![SOTA](https://img.shields.io/badge/Status-SOTA-brightgreen) ![Hardware](https://img.shields.io/badge/Hardware-Accelerated-blue) ![Epochs](https://img.shields.io/badge/Epochs-169-orange) ![Resolution](https://img.shields.io/badge/Res-480x480-blueviolet)
 
 ## Overview
 
@@ -45,7 +45,7 @@ graph TD
 
 - **Hardware**: NVIDIA GeForce GTX 1650 (4G VRAM)
 - **Software**: PyTorch 2.1+, CUDA 12.1.
-- **Training Lifecycle**: Successfully processed over 150 total epochs securely.
+- **Training Lifecycle**: Successfully processed over 169 total epochs securely.
 
 ## Model Stats
 
@@ -59,7 +59,7 @@ graph TD
 
 ## Evaluation Results
 
-- **Target Detection SOTA**: **mAP50**: 0.6121 | **mAP50-95**: 0.4810 | **Box Loss**: 7.2042 | **Cls Loss**: 2.4058
+- **Target Detection SOTA**: **mAP50**: 0.5511 | **mAP50-95**: 0.4189 | **Box Loss**: 46.8497 | **Cls Loss**: 2.5657
 - **Validation Protocol**: 80/20 train/validate with zero ground-truth label leakage.
 
 ## Scientific Research & Reference Paper
