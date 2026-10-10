@@ -31,7 +31,7 @@ graph TD
 ```
 
 > [!TIP]
-> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[yolov8n-usage.ipynb](yolov8n-usage.ipynb)** notebook in this directory.
+> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[yolov8n-kaggle-usage.ipynb](yolov8n-kaggle-usage.ipynb)** or **[yolov8n-colab-usage.ipynb](yolov8n-colab-usage.ipynb)** notebooks in this directory.
 >
 > **Artifacts & Checkpoints Structure**:
 >

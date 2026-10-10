@@ -62,7 +62,7 @@ with torch.no_grad():
 ```
 
 > [!TIP]
-> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[forex_predictor_usage.ipynb](forex_predictor_usage.ipynb)** notebook in this directory.
+> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[forex_predictor-kaggle-usage.ipynb](forex_predictor-kaggle-usage.ipynb)** or **[forex_predictor-colab-usage.ipynb](forex_predictor-colab-usage.ipynb)** notebooks in this directory.
 
 - **Input Requirements**: Normalized OHLCV tensor sequences across multiple timeframes.
 - **Failures**: Susceptible to spread friction and lookahead leakage if walk-forward validation is compromised.

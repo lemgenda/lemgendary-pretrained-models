@@ -31,7 +31,7 @@ graph TD
 ```
 
 > [!TIP]
-> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[parsenet_usage.ipynb](parsenet_usage.ipynb)** notebook in this directory.
+> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[parsenet-kaggle-usage.ipynb](parsenet-kaggle-usage.ipynb)** or **[parsenet-colab-usage.ipynb](parsenet-colab-usage.ipynb)** notebooks in this directory.
 
 - **Input Requirements**: RGB Image Tensors normalized to ImageNet stats.
 - **Failures**: Large aspect ratio distortions during standard resize phases.

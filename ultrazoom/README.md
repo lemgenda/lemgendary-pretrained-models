@@ -58,7 +58,7 @@ restored_img.save("restored.png")
 ```
 
 > [!TIP]
-> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[ultrazoom_usage.ipynb](ultrazoom_usage.ipynb)** notebook in this directory.
+> **Implementation Guide**: For high-performance deployment including ONNX (FP32/FP16) and standalone PyTorch snippets, refer to the **[ultrazoom-kaggle-usage.ipynb](ultrazoom-kaggle-usage.ipynb)** or **[ultrazoom-colab-usage.ipynb](ultrazoom-colab-usage.ipynb)** notebooks in this directory.
 
 - **Input Requirements**: RGB Image Tensors normalized to ImageNet stats.
 - **Failures**: Large aspect ratio distortions during standard resize phases.
